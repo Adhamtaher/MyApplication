@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navpaient"
+    app:startDestination="@id/mainPagePatient">
+    <action
+        android:id="@+id/action_confirmRound_to_mainPagePatient"
+        app:destination="@id/mainPagePatient" />
+    <action
+        android:id="@+id/action_confirmBooking_to_confirmRound"
+        app:destination="@id/confirmRound" />
+    <fragment
+        android:id="@+id/mainPagePatient"
+        android:name="com.example.myapplication.fragment.patient.navmenu.MainPagePatient"
+        android:label="fragment_main_page_patient"
+        tools:layout="@layout/fragment_main_page_patient" >
+        <action
+            android:id="@+id/action_mainPagePatient_to_radiations"
+            app:destination="@id/radiations" />
+        <action
+            android:id="@+id/action_mainPagePatient_to_analysis"
+            app:destination="@id/analysis" />
+        <action
+            android:id="@+id/action_mainPagePatient_to_speciality"
+            app:destination="@id/speciality" />
+        <action
+            android:id="@+id/action_mainPagePatient_to_firstAid"
+            app:destination="@id/firstAid" />
+        <action
+            android:id="@+id/action_mainPagePatient_to_medicineTypes"
+            app:destination="@id/medicineTypes" />
+    </fragment>
+    <fragment
+        android:id="@+id/activity"
+        android:name="com.example.myapplication.fragment.patient.navmenu.Activity"
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity" >
+        <action
+            android:id="@+id/action_activity_to_doctorActivity"
+            app:destination="@id/doctorActivity" />
+        <action
+            android:id="@+id/action_activity_to_analysisActivity"
+            app:destination="@id/analysisActivity" />
+        <action
+            android:id="@+id/action_activity_to_radiationActivity"
+            app:destination="@id/radiationActivity" />
+        <action
+            android:id="@+id/action_activity_to_surgeriesActivity"
+            app:destination="@id/surgeriesActivity" />
+        <action
+            android:id="@+id/action_activity_to_bill2"
+            app:destination="@id/bill2" />
+        <action
+            android:id="@+id/action_activity_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalHistory"
+        android:name="com.example.myapplication.fragment.patient.navmenu.MedicalHistory"
+        android:label="fragment_medical_history"
+        tools:layout="@layout/fragment_medical_history" >
+        <action
+            android:id="@+id/action_medicalHistory_to_doctorHistory"
+            app:destination="@id/doctorHistory" />
+        <action
+            android:id="@+id/action_medicalHistory_to_analysisHistory"
+            app:destination="@id/analysisHistory" />
+        <action
+            android:id="@+id/action_medicalHistory_to_radiationHistory"
+            app:destination="@id/radiationHistory" />
+        <action
+            android:id="@+id/action_medicalHistory_to_surgeriesHistory"
+            app:destination="@id/surgeriesHistory" />
+        <action
+            android:id="@+id/action_medicalHistory_to_medicalCondition"
+            app:destination="@id/medicalCondition" />
+        <action
+            android:id="@+id/action_medicalHistory_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.myapplication.fragment.patient.navmenu.Account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_account_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctors"
+        android:name="com.example.myapplication.fragment.patient.mainpage.doctors.doctors.Doctors"
+        android:label="fragment_doctors"
+        tools:layout="@layout/fragment_doctors" >
+        <action
+            android:id="@+id/action_doctors_to_booking"
+            app:destination="@id/booking" />
+        <action
+            android:id="@+id/action_doctors_to_confirmBooking"
+            app:destination="@id/confirmBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorActivity"
+        android:name="com.example.myapplication.fragment.patient.activity.doctor.DoctorActivity"
+        android:label="DoctorActivity" >
+        <action
+            android:id="@+id/action_doctorActivity_to_doctorHistory"
+            app:destination="@id/doctorHistory" />
+        <action
+            android:id="@+id/action_doctorActivity_to_activity"
+            app:destination="@id/activity" />
+        <action
+            android:id="@+id/action_doctorActivity_to_doctorDetailsActivity"
+            app:destination="@id/doctorDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisActivity"
+        android:name="com.example.myapplication.fragment.patient.activity.analysis.AnalysisActivity"
+        android:label="AnalysisActivity" >
+        <action
+            android:id="@+id/action_analysisActivity_to_analysisHistory"
+            app:destination="@id/analysisHistory" />
+        <action
+            android:id="@+id/action_analysisActivity_to_activity"
+            app:destination="@id/activity" />
+        <action
+            android:id="@+id/action_analysisActivity_to_analysisDetails"
+            app:destination="@id/analysisDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiationActivity"
+        android:name="com.example.myapplication.fragment.patient.activity.radiation.RadiationActivity"
+        android:label="RadiationActivity" >
+        <action
+            android:id="@+id/action_radiationActivity_to_radiationHistory"
+            app:destination="@id/radiationHistory" />
+        <action
+            android:id="@+id/action_radiationActivity_to_activity"
+            app:destination="@id/activity" />
+        <action
+            android:id="@+id/action_radiationActivity_to_radiationDetails"
+            app:destination="@id/radiationDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/surgeriesActivity"
+        android:name="com.example.myapplication.fragment.patient.activity.surgeries.SurgeriesActivity"
+        android:label="SurgeriesActivity" >
+        <action
+            android:id="@+id/action_surgeriesActivity_to_activity"
+            app:destination="@id/activity" />
+        <action
+            android:id="@+id/action_surgeriesActivity_to_surgeriesDetails"
+            app:destination="@id/surgeriesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/bill2"
+        android:name="com.example.myapplication.fragment.patient.activity.Bill"
+        android:label="fragment_bill"
+        tools:layout="@layout/fragment_bill" />
+    <fragment
+        android:id="@+id/doctorHistory"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.doctor.DoctorHistory"
+        android:label="DoctorHistory" >
+        <action
+            android:id="@+id/action_doctorHistory_to_doctorActivity"
+            app:destination="@id/doctorActivity" />
+        <action
+            android:id="@+id/action_doctorHistory_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+        <action
+            android:id="@+id/action_doctorHistory_to_doctorDetalisHistory"
+            app:destination="@id/doctorDetalisHistory" />
+        <action
+            android:id="@+id/action_doctorHistory_to_booking"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisHistory"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.analysis.AnalysisHistory"
+        android:label="AnalysisHistory" >
+        <action
+            android:id="@+id/action_analysisHistory_to_analysisActivity"
+            app:destination="@id/analysisActivity" />
+        <action
+            android:id="@+id/action_analysisHistory_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+        <action
+            android:id="@+id/action_analysisHistory_to_analysisResult"
+            app:destination="@id/analysisResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiationHistory"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.radiation.RadiationHistory"
+        android:label="RadiationHistory" >
+        <action
+            android:id="@+id/action_radiationHistory_to_radiationActivity"
+            app:destination="@id/radiationActivity" />
+        <action
+            android:id="@+id/action_radiationHistory_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+        <action
+            android:id="@+id/action_radiationHistory_to_radiationDetails"
+            app:destination="@id/radiationResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/surgeriesHistory"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.surgeries.SurgeriesHistory"
+        android:label="SurgeriesHistory" >
+        <action
+            android:id="@+id/action_surgeriesHistory_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+        <action
+            android:id="@+id/action_surgeriesHistory_to_surgeriesResults"
+            app:destination="@id/surgeriesResults" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalCondition"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.MedicalCondition"
+        android:label="MedicalCondition" >
+        <action
+            android:id="@+id/action_medicalCondition_to_diagnosis2"
+            app:destination="@id/diagnosis2" />
+        <action
+            android:id="@+id/action_medicalCondition_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/diagnosis2"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis.Diagnosis"
+        android:label="Diagnosis" >
+        <action
+            android:id="@+id/action_diagnosis2_to_diagnosisDetails"
+            app:destination="@id/diagnosisDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.example.myapplication.fragment.patient.mainpage.doctors.doctors.booking.Booking"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_booking_to_confirmBooking"
+            app:destination="@id/confirmBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisResult"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.analysis.AnalysisResult"
+        android:label="AnalysisResult" />
+    <fragment
+        android:id="@+id/analysisBooking"
+        android:name="com.example.myapplication.fragment.patient.mainpage.analysis.AnalysisBooking"
+        android:label="fragment_analysis_booking"
+        tools:layout="@layout/fragment_analysis_booking" >
+        <action
+            android:id="@+id/action_analysisBooking_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiations"
+        android:name="com.example.myapplication.fragment.patient.mainpage.examinations.Radiations"
+        android:label="fragment_radiations"
+        tools:layout="@layout/fragment_radiations" >
+        <action
+            android:id="@+id/action_radiations_to_radiationBooking"
+            app:destination="@id/radiationBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysis"
+        android:name="com.example.myapplication.fragment.patient.mainpage.analysis.Analysis"
+        android:label="fragment_analysis"
+        tools:layout="@layout/fragment_analysis" >
+        <action
+            android:id="@+id/action_analysis_to_analysisBooking"
+            app:destination="@id/analysisBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiationBooking"
+        android:name="com.example.myapplication.fragment.patient.mainpage.examinations.RadiationBooking"
+        android:label="fragment_radiation_booking"
+        tools:layout="@layout/fragment_radiation_booking" >
+        <action
+            android:id="@+id/action_radiationBooking_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/speciality"
+        android:name="com.example.myapplication.fragment.patient.mainpage.doctors.speciality.Speciality"
+        android:label="fragment_speciality"
+        tools:layout="@layout/fragment_speciality" >
+        <action
+            android:id="@+id/action_speciality_to_doctors"
+            app:destination="@id/doctors" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmBooking"
+        android:name="com.example.myapplication.fragment.patient.mainpage.doctors.doctors.booking.ConfirmBooking"
+        android:label="fragment_confirm_booking"
+        tools:layout="@layout/fragment_confirm_booking" >
+        <action
+            android:id="@+id/action_confirmBooking_to_confirmRound"
+            app:destination="@id/confirmRound" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmRound"
+        android:name="com.example.myapplication.fragment.patient.mainpage.doctors.doctors.booking.ConfirmRound"
+        android:label="fragment_confirm_round"
+        tools:layout="@layout/fragment_confirm_round" >
+        <action
+            android:id="@+id/action_confirmRound_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstAid"
+        android:name="com.example.myapplication.fragment.patient.mainpage.firstaid.FirstAid"
+        android:label="fragment_first_aid"
+        tools:layout="@layout/fragment_first_aid" />
+    <fragment
+        android:id="@+id/doctorDetalisHistory"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.doctor.DoctorDetalisHistory"
+        android:label="fragment_doctordetalis"
+        tools:layout="@layout/fragment_doctor_detalis_history" >
+        <action
+            android:id="@+id/action_doctorDetalisHistory_to_booking"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiationResult"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.radiation.RadiationResults"
+        android:label="fragment_radiation_details"
+        tools:layout="@layout/fragment_radiation_results" />
+    <fragment
+        android:id="@+id/surgeriesResults"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.surgeries.SurgeriesResults"
+        android:label="fragment_surgeries_results"
+        tools:layout="@layout/fragment_surgeries_results" />
+    <fragment
+        android:id="@+id/diagnosisDetails"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis.DiagnosisDetails"
+        android:label="fragment_diagnosis_details"
+        tools:layout="@layout/fragment_diagnosis_details" />
+    <fragment
+        android:id="@+id/doctorDetailsActivity"
+        android:name="com.example.myapplication.fragment.patient.activity.doctor.DoctorDetailsActivity"
+        android:label="fragment_doctor_details"
+        tools:layout="@layout/fragment_doctor_details_activity" >
+        <action
+            android:id="@+id/action_doctorDetailsActivity_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisDetails"
+        android:name="com.example.myapplication.fragment.patient.activity.analysis.AnalysisDetails"
+        android:label="fragment_analysis_details"
+        tools:layout="@layout/fragment_analysis_details" >
+        <action
+            android:id="@+id/action_analysisDetails_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiationDetails"
+        android:name="com.example.myapplication.fragment.patient.activity.radiation.RadiationDetails"
+        android:label="fragment_radiation_details"
+        tools:layout="@layout/fragment_radiation_details" >
+        <action
+            android:id="@+id/action_radiationDetails_to_mainPagePatient"
+            app:destination="@id/mainPagePatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/surgeriesDetails"
+        android:name="com.example.myapplication.fragment.patient.activity.surgeries.SurgeriesDetails"
+        android:label="fragment_surgeries_details"
+        tools:layout="@layout/fragment_surgeries_details" />
+    <fragment
+        android:id="@+id/medicineTypes"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.MedicineTypes"
+        android:label="fragment_medicine_types"
+        tools:layout="@layout/fragment_medicine_types" >
+        <action
+            android:id="@+id/action_medicineTypes_to_medicines2"
+            app:destination="@id/medicines2" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicines2"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.medicine.Medicines"
+        android:label="fragment_medicines"
+        tools:layout="@layout/fragment_medicines" />
+</navigation>

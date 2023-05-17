@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bachgroung"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bachgroung">
+
+            <ImageView
+                android:id="@+id/navBar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageButton23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/frame2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="137dp"
+                android:layout_height="159dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="26dp"
+                android:src="@drawable/objects"
+                app:layout_constraintBottom_toBottomOf="@+id/navBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageButton22"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/group43"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.706"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/date"
+                android:textColor="#1433A4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton23" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/hello"
+                android:textColor="#1433A4"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+            <TextView
+                android:id="@+id/helloView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/text"
+                android:textColor="#1433A4"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/how_can_we_help_you_today"
+                android:textColor="#1433A4"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/navBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/patients"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/patients"
+                app:layout_constraintEnd_toStartOf="@+id/surgeries"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pxandreport"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/surgeries"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:paddingBottom="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/surgeries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/patients"
+                app:layout_constraintTop_toBottomOf="@+id/schedule"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/pxandreport"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="8dp"
+                android:paddingBottom="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pxandreport"
+                app:layout_constraintBottom_toTopOf="@+id/patients"
+                app:layout_constraintEnd_toStartOf="@+id/schedule"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/navBar"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/schedule"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:paddingBottom="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/schedule"
+                app:layout_constraintBottom_toTopOf="@+id/surgeries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pxandreport"
+                app:layout_constraintTop_toBottomOf="@+id/navBar"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/clinicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/prescriptions_n_amp_reports"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pxandreport"
+                app:layout_constraintEnd_toEndOf="@+id/pxandreport"
+                app:layout_constraintStart_toStartOf="@+id/pxandreport"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/clinicText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/patients"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/patients"
+                app:layout_constraintEnd_toEndOf="@+id/patients"
+                app:layout_constraintStart_toStartOf="@+id/patients"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/doctorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/schedule"
+                android:textAlignment="center"
+                android:textColor="#FBFBFB"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/schedule"
+                app:layout_constraintEnd_toEndOf="@+id/schedule"
+                app:layout_constraintStart_toEndOf="@+id/clinicText"
+                app:layout_constraintStart_toStartOf="@+id/schedule"
+                tools:ignore="MissingConstraints,TextContrastCheck,TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="375dp"
+                android:layout_height="178dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/norm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/surgeries"
+                tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/frame"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintStart_toStartOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="@+id/imageView10"
+                app:layout_constraintVertical_bias="0.30"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <SearchView
+                android:id="@+id/imageView12"
+                android:layout_width="205dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/back"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@null"
+                android:queryHint="@string/search_for_medicine"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toTopOf="@+id/imageView10"
+                tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+
+            <ImageView
+                android:id="@+id/pxView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_medication_242"
+                app:layout_constraintEnd_toEndOf="@+id/ordermedicine"
+                app:layout_constraintStart_toStartOf="@+id/ordermedicine"
+                app:layout_constraintTop_toTopOf="@+id/ordermedicine"
+                tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/ordermedicine"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:fontFamily="@font/montserrat_light"
+                android:paddingTop="50dp"
+                android:paddingBottom="5dp"
+                android:text="@string/find_nmedicine"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+
+            <ImageView
+                android:id="@+id/phoneView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/phone"
+                app:layout_constraintEnd_toEndOf="@+id/sendPrescription"
+                app:layout_constraintStart_toStartOf="@+id/sendPrescription"
+                app:layout_constraintTop_toTopOf="@+id/sendPrescription"
+                tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/sendPrescription"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:fontFamily="@font/montserrat_light"
+                android:paddingTop="50dp"
+                android:paddingBottom="5dp"
+                android:text="@string/pharmacy_assistant"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/ordermedicine"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/clinicText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/surgeries"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/surgeries"
+                app:layout_constraintEnd_toEndOf="@+id/surgeries"
+                app:layout_constraintStart_toEndOf="@+id/clinicText2"
+                app:layout_constraintStart_toStartOf="@+id/surgeries"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

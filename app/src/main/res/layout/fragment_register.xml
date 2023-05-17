@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bachgroung"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerView"
+        tools:context=".activity.Register">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="330dp"
+            android:layout_height="235dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="330dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:srcCompat="@drawable/hospi"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:textColor="#FFFDFD"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            tools:ignore="Autofill,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/mail"
+            app:layout_constraintStart_toStartOf="@+id/mail"
+            app:layout_constraintTop_toBottomOf="@+id/mail"
+            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+        <EditText
+            android:id="@+id/ChangePass"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            tools:ignore="Autofill,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/city"
+            android:inputType="textLongMessage"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/ChangePass"
+            app:layout_constraintStart_toStartOf="@+id/ChangePass"
+            app:layout_constraintTop_toBottomOf="@+id/ChangePass"
+            tools:ignore="Autofill,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/address"
+            android:inputType="textPersonName|textPostalAddress"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/city"
+            app:layout_constraintStart_toStartOf="@+id/city"
+            app:layout_constraintTop_toBottomOf="@+id/city"
+            tools:ignore="Autofill,RtlSymmetry,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/Birthday"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/birthday"
+            android:inputType="date"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/address"
+            app:layout_constraintStart_toStartOf="@+id/address"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            tools:ignore="Autofill,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/back"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/phone"
+            android:inputType="number"
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/Birthday"
+            app:layout_constraintStart_toStartOf="@+id/Birthday"
+            app:layout_constraintTop_toBottomOf="@+id/Birthday"
+            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/register"
+            android:textColor="#1B43BB"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+        <TextView
+            android:id="@+id/bkLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/loginuline"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

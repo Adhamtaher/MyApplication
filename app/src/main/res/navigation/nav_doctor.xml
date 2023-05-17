@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_doctor"
+    app:startDestination="@id/mainPageDoctor">
+
+    <fragment
+        android:id="@+id/medicineTypes"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.MedicineTypes"
+        android:label="fragment_medicine_types"
+        tools:layout="@layout/fragment_medicine_types">
+        <action
+            android:id="@+id/action_medicineTypes_to_medicines2"
+            app:destination="@id/medicines2" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicines2"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.medicine.Medicines"
+        android:label="fragment_medicines"
+        tools:layout="@layout/fragment_medicines" />
+    <fragment
+        android:id="@+id/mainPageDoctor"
+        android:name="com.example.myapplication.fragment.doctor.MainPageDoctor"
+        android:label="fragment_main_page_doctor"
+        tools:layout="@layout/fragment_main_page_doctor" >
+        <action
+            android:id="@+id/action_mainPageDoctor_to_prescription"
+            app:destination="@id/prescription" />
+        <action
+            android:id="@+id/action_mainPageDoctor_to_shedule"
+            app:destination="@id/shedule" />
+        <action
+            android:id="@+id/action_mainPageDoctor_to_medicineTypes"
+            app:destination="@id/medicineTypes" />
+        <action
+            android:id="@+id/action_mainPageDoctor_to_patients2"
+            app:destination="@id/patients2" />
+        <action
+            android:id="@+id/action_mainPageDoctor_to_surgeriesTypes"
+            app:destination="@id/surgeriesTypes" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescription"
+        android:name="com.example.myapplication.fragment.doctor.Prescription"
+        android:label="fragment_prescription"
+        tools:layout="@layout/fragment_prescription" >
+        <action
+            android:id="@+id/action_prescription_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/shedule"
+        android:name="com.example.myapplication.fragment.doctor.schedule.Shedule"
+        android:label="fragment_shedule"
+        tools:layout="@layout/fragment_shedule" >
+        <action
+            android:id="@+id/action_shedule_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+        <action
+            android:id="@+id/action_shedule_to_patientDetails"
+            app:destination="@id/patientDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/patients2"
+        android:name="com.example.myapplication.fragment.doctor.Patients"
+        android:label="fragment_patients"
+        tools:layout="@layout/fragment_patients" >
+        <action
+            android:id="@+id/action_patients2_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+        <action
+            android:id="@+id/action_patients2_to_patientDetails"
+            app:destination="@id/patientDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/surgeries"
+        android:name="com.example.myapplication.fragment.doctor.surgeries.Surgeries"
+        android:label="fragment_surgeriestypes"
+        tools:layout="@layout/fragment_surgeries" >
+        <action
+            android:id="@+id/action_surgeries_to_surgeriesTypes"
+            app:destination="@id/surgeriesTypes" />
+        <action
+            android:id="@+id/action_surgeries_to_patientDetails"
+            app:destination="@id/patientDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/surgeriesTypes"
+        android:name="com.example.myapplication.fragment.doctor.surgeries.SurgeriesTypes"
+        android:label="fragment_surgeries_types"
+        tools:layout="@layout/fragment_surgeries_types" >
+        <action
+            android:id="@+id/action_surgeriesTypes_to_surgeries"
+            app:destination="@id/surgeries" />
+        <action
+            android:id="@+id/action_surgeriesTypes_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+        <action
+            android:id="@+id/action_surgeriesTypes_to_reserveSurgeries"
+            app:destination="@id/reserveSurgeries" />
+    </fragment>
+    <fragment
+        android:id="@+id/reserveSurgeries"
+        android:name="com.example.myapplication.fragment.doctor.surgeries.ReserveSurgeries"
+        android:label="fragment_reserve_surgeries"
+        tools:layout="@layout/fragment_reserve_surgeries" >
+        <action
+            android:id="@+id/action_reserveSurgeries_to_surgeriesTypes"
+            app:destination="@id/surgeriesTypes" />
+        <action
+            android:id="@+id/action_reserveSurgeries_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDetails"
+        android:name="com.example.myapplication.fragment.doctor.PatientDetails"
+        android:label="fragment_patient_details"
+        tools:layout="@layout/fragment_patient_details" >
+        <action
+            android:id="@+id/action_patientDetails_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
+    </fragment>
+</navigation>

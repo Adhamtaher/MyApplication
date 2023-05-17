@@ -1,0 +1,74 @@
+package com.example.myapplication.fragment.patient.activity.radiation
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.R
+import com.example.myapplication.databinding.FragmentRadiationActivityBinding
+import java.util.ArrayList
+
+class RadiationActivity : Fragment(), RadiationActivityAdapter.MyClickListener {
+
+    lateinit var adapter: RadiationActivityAdapter
+    lateinit var radiationActivityList: ArrayList<RadiationActivityList>
+
+    lateinit var imageId: Array<Int>
+    lateinit var heading : Array<String>
+    lateinit var time : Array<String>
+    lateinit var fee : Array<String>
+
+    private lateinit var binding: FragmentRadiationActivityBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentRadiationActivityBinding.inflate(inflater, container, false)
+        dataIntialize()
+        val layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = layoutManager
+        binding.recyclerView.setHasFixedSize(true)
+        adapter = RadiationActivityAdapter(radiationActivityList,this@RadiationActivity)
+        binding.recyclerView.adapter = adapter
+
+        binding.backButton.setOnClickListener {
+            findNavController().navigate(R.id.action_radiationActivity_to_activity)
+        }
+        binding.history.setOnClickListener {
+            findNavController().navigate(R.id.action_radiationActivity_to_radiationHistory)
+        }
+        return binding.root
+    }
+    private fun dataIntialize() {
+        radiationActivityList = arrayListOf<RadiationActivityList>()
+        imageId = arrayOf(
+            R.drawable.bone2,
+            R.drawable.chest2
+        )
+        heading = arrayOf(
+            getString(R.string.typerad1),
+            getString(R.string.typerad2)
+        )
+        time = arrayOf(
+            getString(R.string.date1),
+            getString(R.string.date2)
+        )
+        fee = arrayOf(
+            getString(R.string.fees1),
+            getString(R.string.fees2)
+        )
+        for (i in imageId.indices) {
+            val radiationActivity = RadiationActivityList(imageId[i], heading[i], time[i], fee[i])
+            radiationActivityList.add(radiationActivity)
+        }
+    }
+    override fun onClick(position: Int) {
+        when(position){
+            0-> findNavController().navigate(R.id.action_radiationActivity_to_radiationDetails)
+            1-> findNavController().navigate(R.id.action_radiationActivity_to_radiationDetails)
+        }
+    }
+}
