@@ -15,7 +15,7 @@ class ScheduleAdapter(private var scheduleList: ArrayList<ScheduleList>, val lis
         init {
             itemBinding.root.setOnClickListener {
                 val position = adapterPosition
-                listener.onClick(position)
+                listener.onClickSch(position)
             }
         }
 
@@ -33,6 +33,6 @@ class ScheduleAdapter(private var scheduleList: ArrayList<ScheduleList>, val lis
         holder.itemBinding.appDate.text = scheduleList[position].date
     }
     interface MyClickListener{
-        fun onClick(position: Int)
+        fun onClickSch(position: Int)
     }
 }

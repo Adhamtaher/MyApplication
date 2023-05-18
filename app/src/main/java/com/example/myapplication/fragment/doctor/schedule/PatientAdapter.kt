@@ -7,18 +7,18 @@ import com.example.myapplication.databinding.FragmentDoctorsListBinding
 import com.example.myapplication.databinding.FragmentPatientListBinding
 import com.example.myapplication.fragment.patient.mainpage.doctors.doctors.DoctorsList
 
-class PatientAdapter(private var patientList: ArrayList<PatientList>, val listener: PatientAdapter.MyClickListener2, val onlistener:PatientAdapter.MyListener) :
+class PatientAdapter(private var patientList: MutableList<PatientList>, val listener: PatientAdapter.MyClickListener2, val onlistener:PatientAdapter.MyListener) :
     RecyclerView.Adapter<PatientAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentPatientListBinding): RecyclerView.ViewHolder(itemBinding.root){
         init {
             itemBinding.cancel.setOnClickListener {
                 val position = adapterPosition
-                listener.onClick2(position)
+                listener.onDeletePat(position)
             }
             itemBinding.check.setOnClickListener {
                 val position = adapterPosition
-                onlistener.onClik(position)
+                onlistener.onClickPat(position)
             }
         }
 
@@ -43,11 +43,16 @@ class PatientAdapter(private var patientList: ArrayList<PatientList>, val listen
         holder.itemBinding.visittime.text = patientList[position].time
         holder.itemBinding.lastvisit.text = patientList[position].last
         holder.itemBinding.diagnosis.text = patientList[position].diagnosis
+        holder.itemBinding.cancel.tag = position
     }
     interface MyClickListener2{
-        fun onClick2(position: Int)
+        fun onDeletePat(position: Int)
     }
     interface MyListener{
-        fun onClik(position: Int)
+        fun onClickPat(position: Int)
+    }
+    fun removeItem(position: Int) {
+        patientList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

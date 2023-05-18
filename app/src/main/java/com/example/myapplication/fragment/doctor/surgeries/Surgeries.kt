@@ -1,9 +1,11 @@
 package com.example.myapplication.fragment.doctor.surgeries
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -83,11 +85,22 @@ class Surgeries : Fragment(), SurgeriesAdapter.MyClickListener, SurgeriesAdapter
         }
     }
 
-    override fun onClick(position: Int) {
-        findNavController().navigate(R.id.action_surgeries_to_surgeriesTypes)
+    override fun onClickSur(position: Int) {
+        findNavController().navigate(R.id.action_surgeries_to_patientDetails)
     }
 
-    override fun onClik(position: Int) {
-        findNavController().navigate(R.id.action_surgeries_to_patientDetails)
+    override fun onDeleteSur(position: Int) {
+        val builder = AlertDialog.Builder(context)
+        builder.setView(R.layout.alertbox1)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.findViewById<Button>(R.id.btn_yes)?.setOnClickListener {
+            adapter.removeItem(position)
+            dialog.dismiss()
+        }
+        dialog.findViewById<Button>(R.id.btn_cancel)?.setOnClickListener {
+            // Do something when the user clicks No button
+            dialog.dismiss()
+        }
     }
 }

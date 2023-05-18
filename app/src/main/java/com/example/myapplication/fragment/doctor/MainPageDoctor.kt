@@ -1,5 +1,7 @@
 package com.example.myapplication.fragment.doctor
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +42,17 @@ class MainPageDoctor : Fragment() {
         }
         binding.ordermedicine.setOnClickListener {
             findNavController().navigate(R.id.action_mainPageDoctor_to_medicineTypes)
+        }
+        binding.searchView.setOnClickListener {
+            findNavController().navigate(R.id.action_mainPageDoctor_to_medicineTypes)
+        }
+
+        val phoneNumber = "01011498307"
+        val dialIntent = Intent(Intent.ACTION_DIAL)
+        dialIntent.data = Uri.parse("tel:$phoneNumber")
+
+        binding.phonecall.setOnClickListener {
+            startActivity(dialIntent)
         }
 
         return binding.root

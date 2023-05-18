@@ -29,9 +29,6 @@ class PatientDetails : Fragment() {
         binding.backButton.setOnClickListener {
             activity?.onBackPressed()
         }
-        binding.cancel.setOnClickListener {
-            findNavController().navigate(R.id.action_patientDetails_to_mainPageDoctor)
-        }
         binding.mediaclreportbtn.setOnClickListener {
             binding.lmdimage.visibility = View.VISIBLE
         }

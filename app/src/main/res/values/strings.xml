@@ -296,7 +296,9 @@
     <string name="operation_name">Operation name</string>
     <string name="medical_diagnosis">Medical diagnosis</string>
     <string name="fees0">Fees</string>
+    <string name="surgeries1">Surgeries:</string>
     <string name="has_chronic_diseases">Has chronic diseases</string>
     <string name="latest_radiation_report">Latest radiation report</string>
     <string name="patient_details">Patient details</string>
+    <string name="recent_patients">Recent patients:</string>
 </resources>

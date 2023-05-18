@@ -84,6 +84,9 @@
         <action
             android:id="@+id/action_surgeries_to_patientDetails"
             app:destination="@id/patientDetails" />
+        <action
+            android:id="@+id/action_surgeries_to_mainPageDoctor"
+            app:destination="@id/mainPageDoctor" />
     </fragment>
     <fragment
         android:id="@+id/surgeriesTypes"
