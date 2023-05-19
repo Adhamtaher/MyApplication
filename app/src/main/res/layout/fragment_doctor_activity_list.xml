@@ -99,14 +99,15 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="25dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
             app:layout_constraintTop_toBottomOf="@+id/imageView23"
-            app:srcCompat="@drawable/baseline_access_time_24"
-            tools:ignore="ContentDescription" />
+            app:srcCompat="@drawable/noun_doctor_visit_day_5231469"
+            tools:ignore="ContentDescription"
+            app:tint = "@color/main"/>
 
         <ImageView
             android:id="@+id/imageView16"
@@ -117,7 +118,8 @@
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
             app:layout_constraintTop_toBottomOf="@+id/imageView9"
             app:srcCompat="@drawable/baseline_attach_money_24"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            app:tint = "@color/main"/>
 
         <ImageView
             android:id="@+id/imageView23"
@@ -131,7 +133,7 @@
             tools:ignore="ContentDescription" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/cancel"
             android:layout_width="130dp"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
@@ -158,7 +160,7 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/cancel"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextContrastCheck,TextSizeCheck" />
 

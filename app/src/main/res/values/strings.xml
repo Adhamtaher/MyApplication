@@ -59,6 +59,7 @@
     <string name="address">Address</string>
     <string name="birthday">Birthday</string>
     <string name="phone">Phone Number</string>
+    <string name="phone2">Phone Number:</string>
     <string name="register">Register</string>
     <string name="don_t_have_an_account">Don\'t have an account</string>
     <string name="welcome_to">Welcome to,</string>

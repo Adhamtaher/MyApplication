@@ -18,6 +18,14 @@ class ConfirmBooking : Fragment() {
         ): View? {
             binding = FragmentConfirmBookingBinding.inflate(inflater, container, false)
 
+            binding.username.isEnabled = false
+            binding.phonenumber.isEnabled = false
+
+            binding.checkBox.setOnCheckedChangeListener { _, isChecked ->
+                binding.username.isEnabled = isChecked
+                binding.phonenumber.isEnabled = isChecked
+            }
+
             binding.backButton.setOnClickListener {
                 activity?.onBackPressed()
             }

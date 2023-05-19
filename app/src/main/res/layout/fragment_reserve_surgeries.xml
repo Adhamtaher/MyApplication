@@ -19,6 +19,7 @@
             android:background="@drawable/btn"
             android:fontFamily="@font/montserrat"
             android:text="@string/select_the_date"
+            android:textAllCaps="false"
             android:textColor="@color/main"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/imageView39"
@@ -98,7 +99,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/baseline_attach_money_242"
+            android:src="@drawable/baseline_attach_money_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView22" />
 
@@ -109,7 +110,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/baseline_access_time_242"
+            android:src="@drawable/baseline_calendar_month_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
@@ -196,7 +197,7 @@
             app:layout_constraintTop_toBottomOf="@+id/doctorName" />
 
         <EditText
-            android:id="@+id/username3"
+            android:id="@+id/phonenumber"
             android:layout_width="295dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
@@ -216,7 +217,7 @@
             tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
 
         <EditText
-            android:id="@+id/username2"
+            android:id="@+id/username"
             android:layout_width="295dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"

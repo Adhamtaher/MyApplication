@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentAnalysisActivityListBinding
 
-class AnalysisActivityAdapter(private val analysisActivityList: ArrayList<AnlaysisActivityList>, val listener: AnalysisActivityAdapter.MyClickListener) :
+class AnalysisActivityAdapter(private val analysisActivityList: ArrayList<AnlaysisActivityList>, val listener: AnalysisActivityAdapter.MyClickListener, val onlistener: AnalysisActivityAdapter.MyListener) :
     RecyclerView.Adapter<AnalysisActivityAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentAnalysisActivityListBinding): RecyclerView.ViewHolder(itemBinding.root){
@@ -13,6 +13,10 @@ class AnalysisActivityAdapter(private val analysisActivityList: ArrayList<Anlays
             itemBinding.details.setOnClickListener {
                 val position = adapterPosition
                 listener.onClick(position)
+            }
+            itemBinding.cancel.setOnClickListener {
+                val position = adapterPosition
+                onlistener.onDelete(position)
             }
         }
     }
@@ -33,5 +37,12 @@ class AnalysisActivityAdapter(private val analysisActivityList: ArrayList<Anlays
     }
     interface MyClickListener{
         fun onClick(position: Int)
+    }
+    interface MyListener{
+        fun onDelete(position: Int)
+    }
+    fun removeItem(position: Int) {
+        analysisActivityList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

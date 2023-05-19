@@ -1,17 +1,19 @@
 package com.example.myapplication.fragment.patient.activity.doctor
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentDoctorActivityBinding
 import java.util.ArrayList
 
-class DoctorActivity : Fragment(), DoctorActivityAdapter.MyClickListener {
+class DoctorActivity : Fragment(), DoctorActivityAdapter.MyClickListener, DoctorActivityAdapter.MyListener {
 
     lateinit var adapter: DoctorActivityAdapter
     lateinit var doctorActivityList: ArrayList<DoctorActivityList>
@@ -32,7 +34,7 @@ class DoctorActivity : Fragment(), DoctorActivityAdapter.MyClickListener {
         val layoutManager = LinearLayoutManager(context)
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.setHasFixedSize(true)
-        adapter = DoctorActivityAdapter(doctorActivityList,this@DoctorActivity)
+        adapter = DoctorActivityAdapter(doctorActivityList,this@DoctorActivity, this@DoctorActivity)
         binding.recyclerView.adapter = adapter
 
         binding.backButton.setOnClickListener {
@@ -75,6 +77,20 @@ class DoctorActivity : Fragment(), DoctorActivityAdapter.MyClickListener {
         when(position){
             0-> findNavController().navigate(R.id.action_doctorActivity_to_doctorDetailsActivity)
             1-> findNavController().navigate(R.id.action_doctorActivity_to_doctorDetailsActivity)
+        }
+    }
+    override fun onDelete(position: Int) {
+        val builder = AlertDialog.Builder(context)
+        builder.setView(R.layout.alertbox1)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.findViewById<Button>(R.id.btn_yes)?.setOnClickListener {
+            adapter.removeItem(position)
+            dialog.dismiss()
+        }
+        dialog.findViewById<Button>(R.id.btn_cancel)?.setOnClickListener {
+            // Do something when the user clicks No button
+            dialog.dismiss()
         }
     }
 }

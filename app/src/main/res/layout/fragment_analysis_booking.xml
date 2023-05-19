@@ -10,19 +10,44 @@
         android:layout_height="wrap_content">
 
 
+        <Button
+            android:id="@+id/datepick2"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/btn"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/select_the_date"
+            android:textAllCaps="false"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="@+id/imageView12"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_calendar_month_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
         <EditText
-            android:id="@+id/username3"
+            android:id="@+id/phonenumber"
             android:layout_width="295dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/back"
-            android:editable="false"
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:hint="@string/phone"
-            android:inputType="none"
+            android:inputType="phone"
             android:paddingStart="20dp"
             android:textColor="#FFFDFD"
             android:textColorHint="@color/white"
@@ -63,18 +88,17 @@
             app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
         <EditText
-            android:id="@+id/username2"
+            android:id="@+id/username"
             android:layout_width="295dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/back"
-            android:editable="false"
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:hint="@string/name"
-            android:inputType="none"
+            android:inputType="text"
             android:paddingStart="20dp"
             android:textColor="#FFFDFD"
             android:textColorHint="@color/white"
@@ -91,11 +115,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat"
-            android:text="@string/phone"
+            android:text="@string/phone2"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/username2" />
+            app:layout_constraintTop_toBottomOf="@+id/username" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -103,10 +127,10 @@
             android:layout_height="95dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/baseline_attach_money_242"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_attach_money_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            android:importantForAccessibility="no" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
             android:id="@+id/textView23"
@@ -126,16 +150,16 @@
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textAlignment="textStart"
-            android:textSize="18sp"
             android:text="@string/_400egp"
+            android:textAlignment="textStart"
             android:textColor="#FFFFFF"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toBottomOf="@+id/textView23"
             tools:ignore="TextSizeCheck" />
@@ -144,7 +168,7 @@
             android:id="@+id/confirm"
             android:layout_width="355dp"
             android:layout_height="48dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="65dp"
             android:background="@drawable/btn"
             android:backgroundTint="#FEFEFE"
@@ -157,7 +181,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tanggalAnda"
+            app:layout_constraintTop_toBottomOf="@+id/datepick2"
             tools:ignore="VisualLintButtonSize" />
 
         <ImageView
@@ -230,34 +254,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
-        <Button
-            android:id="@+id/tanggal"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/btn"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/select_the_date"
-            android:textColor="@color/main"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView25"
-            tools:ignore="TextSizeCheck" />
-
-        <TextView
-            android:id="@+id/tanggalAnda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/desired_date"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tanggal" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

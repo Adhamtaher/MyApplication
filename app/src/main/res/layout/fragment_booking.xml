@@ -130,7 +130,7 @@
             android:layout_marginTop="50dp"
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
             app:layout_constraintTop_toTopOf="@+id/ratingBar"
-            app:srcCompat="@drawable/baseline_access_time_242"
+            app:srcCompat="@drawable/baseline_access_time_filled_24"
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <ImageView
@@ -140,7 +140,7 @@
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
             app:layout_constraintTop_toBottomOf="@+id/imageView9"
-            app:srcCompat="@drawable/baseline_attach_money_242"
+            app:srcCompat="@drawable/baseline_attach_money_24"
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
 

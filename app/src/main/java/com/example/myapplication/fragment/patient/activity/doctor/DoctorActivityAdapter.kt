@@ -4,8 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentDoctorActivityListBinding
+import com.example.myapplication.fragment.doctor.surgeries.SurgeriesAdapter
 
-class DoctorActivityAdapter(private val doctorsActivityList: ArrayList<DoctorActivityList>, val listener: DoctorActivityAdapter.MyClickListener) :
+class DoctorActivityAdapter(private val doctorsActivityList: ArrayList<DoctorActivityList>, val listener: DoctorActivityAdapter.MyClickListener, val onlistener: DoctorActivityAdapter.MyListener) :
     RecyclerView.Adapter<DoctorActivityAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentDoctorActivityListBinding): RecyclerView.ViewHolder(itemBinding.root){
@@ -13,6 +14,10 @@ class DoctorActivityAdapter(private val doctorsActivityList: ArrayList<DoctorAct
             itemBinding.details.setOnClickListener {
                 val position = adapterPosition
                 listener.onClick(position)
+            }
+            itemBinding.cancel.setOnClickListener {
+                val position = adapterPosition
+                onlistener.onDelete(position)
             }
         }
     }
@@ -34,5 +39,12 @@ class DoctorActivityAdapter(private val doctorsActivityList: ArrayList<DoctorAct
     }
     interface MyClickListener{
         fun onClick(position: Int)
+    }
+    interface MyListener{
+        fun onDelete(position: Int)
+    }
+    fun removeItem(position: Int) {
+        doctorsActivityList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

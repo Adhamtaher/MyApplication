@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentDoctorHistoryListBinding
 import com.example.myapplication.databinding.FragmentMedicineListBinding
+import com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.MedicineTypesList
 
-class MedicineAdapter(private val medicineList: ArrayList<MedicineList>, val listener: MedicineAdapter.MyClickListener) :
+class MedicineAdapter(private var medicineList: ArrayList<MedicineList>, val listener: MedicineAdapter.MyClickListener) :
     RecyclerView.Adapter<MedicineAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentMedicineListBinding): RecyclerView.ViewHolder(itemBinding.root){
@@ -17,6 +18,12 @@ class MedicineAdapter(private val medicineList: ArrayList<MedicineList>, val lis
                 listener.onClick(position)
             }
         }
+    }
+
+    fun setFilteredList(medicineList: java.util.ArrayList<MedicineList>){
+        this.medicineList = medicineList
+        notifyDataSetChanged()
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyView {

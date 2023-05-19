@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentRadiationActivityListBinding
 
-class RadiationActivityAdapter(private val radiationActivityList: ArrayList<RadiationActivityList>, val listener: RadiationActivityAdapter.MyClickListener) :
+class RadiationActivityAdapter(private val radiationActivityList: ArrayList<RadiationActivityList>, val listener: RadiationActivityAdapter.MyClickListener, val onlistener: RadiationActivityAdapter.MyListener) :
     RecyclerView.Adapter<RadiationActivityAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentRadiationActivityListBinding): RecyclerView.ViewHolder(itemBinding.root){
@@ -13,6 +13,10 @@ class RadiationActivityAdapter(private val radiationActivityList: ArrayList<Radi
             itemBinding.details.setOnClickListener {
                 val position = adapterPosition
                 listener.onClick(position)
+            }
+            itemBinding.cancel.setOnClickListener {
+                val position = adapterPosition
+                onlistener.onDelete(position)
             }
         }
     }
@@ -33,5 +37,12 @@ class RadiationActivityAdapter(private val radiationActivityList: ArrayList<Radi
     }
     interface MyClickListener{
         fun onClick(position: Int)
+    }
+    interface MyListener{
+        fun onDelete(position: Int)
+    }
+    fun removeItem(position: Int) {
+        radiationActivityList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

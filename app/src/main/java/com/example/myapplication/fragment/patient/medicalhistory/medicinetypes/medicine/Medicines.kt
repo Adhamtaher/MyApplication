@@ -4,12 +4,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentDoctorHistoryBinding
 import com.example.myapplication.databinding.FragmentMedicinesBinding
+import com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.MedicineTypesList
 import java.util.ArrayList
+import java.util.Locale
 
 class Medicines : Fragment(), MedicineAdapter.MyClickListener{
 
@@ -34,10 +38,41 @@ class Medicines : Fragment(), MedicineAdapter.MyClickListener{
         adapter = MedicineAdapter(medicineList, this@Medicines)
         binding.recyclerView.adapter = adapter
 
+        binding.searchview.clearFocus()
+        binding.searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
+                return true
+            }
+
+        })
+
         binding.backButton.setOnClickListener {
             activity?.onBackPressed()
         }
         return binding.root
+    }
+
+    private fun filterList(query: String?){
+        if (query != null){
+            val filteredList = ArrayList<MedicineList>()
+            for (i in medicineList){
+                if (i.heading.lowercase(Locale.ROOT).contains(query)){
+                    filteredList.add(i)
+                }
+            }
+            if (filteredList.isEmpty()){
+                Toast.makeText(context, "No data found", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                adapter.setFilteredList(filteredList)
+
+            }
+        }
     }
     private fun dataIntialize() {
         medicineList = arrayListOf<MedicineList>()
