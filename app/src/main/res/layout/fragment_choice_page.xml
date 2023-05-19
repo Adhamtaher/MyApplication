@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bachgroung"
+    tools:context=".activity.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat_semibold"
+
+
+        android:text="@string/welcome_to"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="330dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hospi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="330dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/doctor"
+        android:textAllCaps="false"
+        android:textColor="@color/main"
+        app:layout_constraintEnd_toEndOf="@+id/Doctor"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="@+id/Doctor"
+        app:layout_constraintTop_toTopOf="@+id/Doctor"
+        tools:ignore="VisualLintOverlap,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/patient"
+        android:textAllCaps="false"
+        android:textColor="@color/main"
+        app:layout_constraintEnd_toEndOf="@+id/Patient"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/Patient"
+        app:layout_constraintTop_toTopOf="@+id/Patient"
+        tools:ignore="VisualLintBounds,VisualLintOverlap" />
+
+    <ImageView
+        android:id="@+id/Doctor"
+        android:layout_width="180dp"
+        android:layout_height="285dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/doctorchoice"
+        app:layout_constraintEnd_toStartOf="@+id/Patient"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:importantForAccessibility="no"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/Patient"
+        android:layout_width="180dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/patientchoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Doctor"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:importantForAccessibility="no"
+        tools:ignore="VisualLintBounds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/main">
+    app:startDestination="@id/choicePage">
     <fragment
         android:id="@+id/main"
         android:name="com.example.myapplication.fragment.main.Main"
@@ -34,6 +34,23 @@
             android:id="@+id/action_register_to_login"
             app:destination="@id/login" />
     </fragment>
+    <fragment
+        android:id="@+id/choicePage"
+        android:name="com.example.myapplication.fragment.main.ChoicePage"
+        android:label="fragment_choice_page"
+        tools:layout="@layout/fragment_choice_page" >
+        <action
+            android:id="@+id/action_choicePage_to_main"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_choicePage_to_loginD"
+            app:destination="@id/loginD" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginD"
+        android:name="com.example.myapplication.fragment.main.LoginD"
+        android:label="fragment_login_d"
+        tools:layout="@layout/fragment_login_d" />
 
 
 </navigation>

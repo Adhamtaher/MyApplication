@@ -301,4 +301,6 @@
     <string name="latest_radiation_report">Latest radiation report</string>
     <string name="patient_details">Patient details</string>
     <string name="recent_patients">Recent patients:</string>
+    <string name="doctor">Doctor</string>
+    <string name="patient">Patient</string>
 </resources>
