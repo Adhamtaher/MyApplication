@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:id="@+id/diagnosisDetails">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,9 +13,9 @@
 
         <TextView
             android:id="@+id/textView39"
-            android:layout_width="260dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="65dp"
             android:text="@string/medical_report_documentaion"
@@ -21,8 +23,11 @@
             android:textSize="24sp"
             app:fontFamily="@font/montserrat_medium"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView44"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="TextSizeCheck" />
 
         <TextView
@@ -211,6 +216,8 @@
             android:textColor="@color/white"
             android:textSize="24sp"
             app:fontFamily="@font/montserrat_medium"
+            app:layout_constraintEnd_toStartOf="@+id/imageView1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -218,12 +225,14 @@
             android:id="@+id/textView44"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:text="@string/prescription_image"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:fontFamily="@font/montserrat_medium"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -245,45 +254,64 @@
             tools:ignore="RtlSymmetry,TextSizeCheck" />
 
         <ImageButton
-            android:id="@+id/imageView24"
+            android:id="@+id/imageView1"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/emptybtn"
             android:scaleType="fitCenter"
             android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="@+id/textView33"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView43"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView33"
+            app:layout_constraintTop_toTopOf="@+id/textView33"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageView27"
+            android:id="@+id/imageView2"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginStart="30dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/emptybtn"
+            android:importantForAccessibility="no"
             android:scaleType="fitCenter"
             android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="@+id/textView44"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAccessibility="no" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView44"
+            app:layout_constraintTop_toTopOf="@+id/textView44"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageView30"
+            android:id="@+id/imageView3"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="70dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/emptybtn"
+            android:importantForAccessibility="no"
             android:scaleType="fitCenter"
             android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="@+id/textView39"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView27"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAccessibility="no" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView39"
+            app:layout_constraintTop_toTopOf="@+id/textView39"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView46"
+            android:layout_width="wrap_content"
+            android:layout_height="480dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/analysisreport" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

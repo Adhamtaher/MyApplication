@@ -17,7 +17,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/montserrat"
-        android:text="@string/chronic"
+        android:text="@string/chronic1"
         android:textColor="@color/main"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/imageView28"

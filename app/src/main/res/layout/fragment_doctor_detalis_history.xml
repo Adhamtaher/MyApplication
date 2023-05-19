@@ -37,6 +37,8 @@
             android:background="@drawable/back"
             android:ems="10"
             android:gravity="start|top"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,9 +55,9 @@
             android:importantForAccessibility="no"
             android:scaleType="fitCenter"
             android:src="@drawable/add"
-            app:layout_constraintEnd_toEndOf="@+id/textView25"
-            app:layout_constraintStart_toStartOf="@+id/textView25"
-            app:layout_constraintTop_toTopOf="@+id/textView25"
+            app:layout_constraintEnd_toEndOf="@+id/generateQR"
+            app:layout_constraintStart_toStartOf="@+id/generateQR"
+            app:layout_constraintTop_toTopOf="@+id/generateQR"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -67,9 +69,9 @@
             android:importantForAccessibility="no"
             android:scaleType="fitCenter"
             android:src="@drawable/baseline_download_24"
-            app:layout_constraintEnd_toEndOf="@+id/textView48"
-            app:layout_constraintStart_toStartOf="@+id/textView48"
-            app:layout_constraintTop_toTopOf="@+id/textView48"
+            app:layout_constraintEnd_toEndOf="@+id/Download"
+            app:layout_constraintStart_toStartOf="@+id/Download"
+            app:layout_constraintTop_toTopOf="@+id/Download"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
@@ -192,7 +194,7 @@
             android:textSize="24sp"
             app:fontFamily="@font/montserrat_medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+            app:layout_constraintTop_toBottomOf="@+id/generateQR" />
 
         <ImageView
             android:id="@+id/imageView31"
@@ -221,7 +223,7 @@
             app:tint="@color/white" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/generateQR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -234,13 +236,13 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView48"
+            app:layout_constraintEnd_toStartOf="@+id/Download"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
         <TextView
-            android:id="@+id/textView48"
+            android:id="@+id/Download"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -255,7 +257,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintStart_toEndOf="@+id/generateQR"
             app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
         <Button

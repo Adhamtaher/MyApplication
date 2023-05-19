@@ -63,7 +63,7 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
+        android:layout_width="25dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
@@ -81,7 +81,8 @@
         app:layout_constraintStart_toEndOf="@+id/anaImage"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/baseline_attach_money_24"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        app:tint="@color/main"/>
 
     <ImageView
         android:id="@+id/imageView23"
