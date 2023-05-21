@@ -22,10 +22,10 @@ class ChoicePage : Fragment() {
     ): View? {
         binding = FragmentChoicePageBinding.inflate(inflater, container, false)
 
-        binding.Doctor.setOnClickListener {
+        binding.doctor.setOnClickListener {
             findNavController().navigate(R.id.action_choicePage_to_loginD)
         }
-        binding.Patient.setOnClickListener {
+        binding.patient.setOnClickListener {
             findNavController().navigate(R.id.action_choicePage_to_main)
         }
 

@@ -304,4 +304,7 @@
     <string name="recent_patients">Recent patients:</string>
     <string name="doctor">Doctor</string>
     <string name="patient">Patient</string>
+    <string name="are_you_sure_you_nwant_to_cancel_this_nappointment">Are you sure you\nwant to cancel this\nappointment?</string>
+    <string name="are_you_sure_you_nwant_to_cancel_nthis_day">Are you sure you\nwant to cancel\nthis day?</string>
+    <string name="settings">Settings</string>
 </resources>

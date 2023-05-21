@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/account"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ScrollView
+        android:id="@+id/account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bachgroung"
-        android:fillViewport="true"
-        tools:ignore="UselessParent">
+        android:background="@drawable/background"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bachgroung"
+            android:background="@drawable/background"
             tools:context=".MainActivity">
 
             <ImageView
@@ -35,12 +30,14 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="@string/account"
                 android:textColor="#1433A4"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/editBtn"
                 app:layout_constraintStart_toEndOf="@+id/backButton"
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -59,9 +56,11 @@
 
             <EditText
                 android:id="@+id/Username"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -72,16 +71,17 @@
                 android:textColor="#FFFDFD"
                 android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/Email"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -94,14 +94,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Username"
-                tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields" />
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/PassworD"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -114,14 +116,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Email"
-                tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields" />
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/CitY"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -134,14 +138,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PassworD"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/AddresS"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -154,14 +160,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CitY"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/BirthDay"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -174,14 +182,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/AddresS"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/PhoneNo"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -194,14 +204,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/BirthDay"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry,TextFields,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,TextFields,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/id"
-                android:layout_width="370dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="60dp"
                 android:background="@drawable/back"
                 android:editable="false"
@@ -213,22 +225,22 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/BirthDay"
-                app:layout_constraintStart_toStartOf="@+id/BirthDay"
-                app:layout_constraintTop_toBottomOf="@+id/PhoneNo"
-                tools:ignore="Autofill,Deprecated,RtlSymmetry" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                tools:ignore="Autofill,Deprecated,RtlSymmetry,VisualLintTextFieldSize" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/address"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/AddresS"
+                app:layout_constraintEnd_toEndOf="@+id/AddresS"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/AddresS"
                 app:layout_constraintTop_toBottomOf="@+id/CitY" />
 
@@ -236,13 +248,13 @@
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/birthday"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/BirthDay"
+                app:layout_constraintEnd_toEndOf="@+id/BirthDay"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/BirthDay"
                 app:layout_constraintTop_toBottomOf="@+id/AddresS" />
 
@@ -250,13 +262,13 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/phone"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/PhoneNo"
+                app:layout_constraintEnd_toEndOf="@+id/PhoneNo"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/PhoneNo"
                 app:layout_constraintTop_toBottomOf="@+id/BirthDay" />
 
@@ -264,13 +276,13 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/id"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/id"
+                app:layout_constraintEnd_toEndOf="@+id/id"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/id"
                 app:layout_constraintTop_toBottomOf="@+id/PhoneNo" />
 
@@ -278,13 +290,13 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/password"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/PassworD"
+                app:layout_constraintEnd_toEndOf="@+id/PassworD"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/PassworD"
                 app:layout_constraintTop_toBottomOf="@+id/Email" />
 
@@ -292,13 +304,13 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/city"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/CitY"
+                app:layout_constraintEnd_toEndOf="@+id/CitY"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/CitY"
                 app:layout_constraintTop_toBottomOf="@+id/PassworD" />
 
@@ -306,12 +318,12 @@
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/full_name"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/Username"
+                app:layout_constraintEnd_toEndOf="@+id/Username"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/Username"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -319,13 +331,13 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/email"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/Email"
+                app:layout_constraintEnd_toEndOf="@+id/Email"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/Email"
                 app:layout_constraintTop_toBottomOf="@+id/Username" />
 
@@ -333,7 +345,6 @@
                 android:id="@+id/editBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="#00FFFFFF"
                 android:fontFamily="@font/montserrat"
@@ -343,9 +354,7 @@
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-</FrameLayout>

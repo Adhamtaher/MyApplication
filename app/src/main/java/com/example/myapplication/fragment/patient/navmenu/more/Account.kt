@@ -1,4 +1,4 @@
-package com.example.myapplication.fragment.patient.navmenu
+package com.example.myapplication.fragment.patient.navmenu.more
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,7 +18,7 @@ class Account : Fragment() {
         binding = FragmentAccountBinding.inflate(inflater, container, false)
 
         binding.backButton.setOnClickListener {
-            findNavController().navigate(R.id.action_account_to_mainPagePatient)
+            findNavController().navigate(R.id.action_account_to_more)
         }
 
         return binding.root

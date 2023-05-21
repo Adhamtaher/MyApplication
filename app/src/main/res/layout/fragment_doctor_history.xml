@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
-    android:background="@drawable/bachgroung"
+    android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bachgroung"
+        android:background="@drawable/background"
         android:fillViewport="true"
         tools:ignore="UselessParent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bachgroung"
+        android:background="@drawable/background"
         tools:context=".fragment.medicalhistory.doctor.DoctorHistoryList">
 
         <ImageView
