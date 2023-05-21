@@ -88,13 +88,16 @@
         android:layout_height="285dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
+        android:importantForAccessibility="no"
         android:paddingBottom="20dp"
         android:src="@drawable/doctorchoice"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Patient"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:importantForAccessibility="no"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="VisualLintBounds" />
 
     <ImageView
@@ -103,13 +106,16 @@
         android:layout_height="285dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:importantForAccessibility="no"
         android:paddingBottom="20dp"
         android:src="@drawable/patientchoice"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Doctor"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:importantForAccessibility="no"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="VisualLintBounds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

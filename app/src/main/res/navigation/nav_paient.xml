@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_mainPagePatient_to_medicineTypes"
             app:destination="@id/medicineTypes" />
+        <action
+            android:id="@+id/action_mainPagePatient_to_more"
+            app:destination="@id/more" />
     </fragment>
     <fragment
         android:id="@+id/activity"
@@ -85,8 +88,8 @@
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" >
         <action
-            android:id="@+id/action_account_to_mainPagePatient"
-            app:destination="@id/mainPagePatient" />
+            android:id="@+id/action_account_to_more"
+            app:destination="@id/more" />
     </fragment>
     <fragment
         android:id="@+id/doctors"
@@ -384,4 +387,25 @@
         android:name="com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.medicine.Medicines"
         android:label="fragment_medicines"
         tools:layout="@layout/fragment_medicines" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.myapplication.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_more"
+            app:destination="@id/more" />
+    </fragment>
+    <fragment
+        android:id="@+id/more"
+        android:name="com.example.myapplication.More"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_more_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_more_to_account"
+            app:destination="@id/account" />
+    </fragment>
 </navigation>
