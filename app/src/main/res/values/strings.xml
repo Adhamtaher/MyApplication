@@ -22,9 +22,9 @@
     <string name="how_can_we_help_you_today">How can we help you today?</string>
     <string name="written_prescription">Written prescription</string>
     <string name="qr_code_prescription">QR code prescription</string>
-    <string name="latest_lab_analysis">Latest Lab analysis</string>
-    <string name="lateset_x_ray_analysis">Latest X-ray analysis</string>
-    <string name="latest_medical_report">Latest medical report</string>
+    <string name="latest_lab_analysis">Latest Lab analysis:</string>
+    <string name="lateset_x_ray_analysis">Latest X-ray analysis:</string>
+    <string name="latest_medical_report">Latest medical report:</string>
     <string name="analysis">Analysis</string>
     <string name="precription">Precription:</string>
     <string name="examinations2">Examinations:</string>
@@ -299,7 +299,7 @@
     <string name="fees0">Fees</string>
     <string name="surgeries1">Surgeries:</string>
     <string name="has_chronic_diseases">Has chronic diseases</string>
-    <string name="latest_radiation_report">Latest radiation report</string>
+    <string name="latest_radiation_report">Latest radiation report:</string>
     <string name="patient_details">Patient details</string>
     <string name="recent_patients">Recent patients:</string>
     <string name="doctor">Doctor</string>

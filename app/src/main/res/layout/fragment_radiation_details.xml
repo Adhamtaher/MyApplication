@@ -12,10 +12,11 @@
 
         <TextView
             android:id="@+id/textView50"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:paddingStart="20dp"
@@ -25,6 +26,7 @@
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView19"
             app:layout_constraintTop_toBottomOf="@+id/textView45"
             tools:ignore="TextSizeCheck" />
@@ -32,42 +34,46 @@
         <ImageView
             android:id="@+id/imageView19"
             android:layout_width="50dp"
-            android:layout_height="47dp"
+            android:layout_height="80dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
             android:importantForAccessibility="no"
             android:src="@drawable/baseline_access_time_242"
+            app:layout_constraintBottom_toBottomOf="@+id/textView50"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+            app:layout_constraintTop_toTopOf="@+id/textView45" />
 
         <TextView
             android:id="@+id/textView45"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/date"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintEnd_toEndOf="@+id/textView50"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView50"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
-            android:text="@string/_400egp"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
+            android:text="@string/_400egp"
             android:textAlignment="textStart"
-            android:textSize="18sp"
             android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView17"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -76,32 +82,33 @@
             android:layout_width="50dp"
             android:layout_height="47dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
             android:importantForAccessibility="no"
             android:src="@drawable/baseline_attach_money_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView29"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toTopOf="@+id/textView11" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/fees"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintEnd_toEndOf="@+id/textView29"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView29"
             app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
         <EditText
             android:id="@+id/phonenumber"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:editable="false"
             android:ems="10"
@@ -121,22 +128,23 @@
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/name2"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/username"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/username"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:editable="false"
             android:ems="10"
@@ -156,45 +164,48 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/phone"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/phonenumber"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/phonenumber"
             app:layout_constraintTop_toBottomOf="@+id/username" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="50dp"
-            android:layout_height="47dp"
+            android:layout_height="80dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
             android:importantForAccessibility="no"
             android:src="@drawable/spec1"
+            app:layout_constraintBottom_toBottomOf="@+id/textView25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+            app:layout_constraintTop_toTopOf="@+id/textView23" />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="97dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/referred_by"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/phonenumber" />
 
         <TextView
             android:id="@+id/textView25"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:paddingStart="20dp"
@@ -204,15 +215,18 @@
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toBottomOf="@+id/textView23"
             tools:ignore="TextSizeCheck" />
 
         <Button
             android:id="@+id/cancel"
-            android:layout_width="355dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="65dp"
             android:background="@drawable/btn"
             android:backgroundTint="#FEFEFE"
@@ -233,12 +247,12 @@
             android:layout_width="50dp"
             android:layout_height="110dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="72dp"
             android:foregroundTint="@color/white"
             android:importantForAccessibility="no"
             android:src="@drawable/account"
+            app:layout_constraintBottom_toBottomOf="@+id/phonenumber"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="@+id/textView21"
             app:tint="@color/white" />
 
         <ImageView
@@ -257,7 +271,6 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/radiation_details"
@@ -265,7 +278,6 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -284,9 +296,11 @@
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="375dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingTop="10dp"

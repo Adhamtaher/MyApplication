@@ -14,9 +14,11 @@
 
         <TextView
             android:id="@+id/textView55"
-            android:layout_width="375dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingTop="10dp"
@@ -31,20 +33,22 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine3"
-            android:layout_width="350dp"
+            android:layout_width="0dp"
             android:layout_height="150dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:ems="10"
             android:gravity="start|top"
-            android:paddingStart="20dp"
-            android:paddingTop="10dp"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView49"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
         <ImageButton
             android:id="@+id/imageView34"
@@ -97,7 +101,6 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
@@ -118,11 +121,11 @@
             android:id="@+id/doctorImage"
             android:layout_width="135dp"
             android:layout_height="139dp"
-            android:layout_marginTop="192dp"
+            android:layout_marginTop="16dp"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
             app:srcCompat="@drawable/smilingdoctor"
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -130,21 +133,22 @@
             android:id="@+id/doctorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="352dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="@string/dr1"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/doctorImage" />
 
 
         <TextView
             android:id="@+id/textView46"
-            android:layout_width="250dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
@@ -152,14 +156,16 @@
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView31"
             app:layout_constraintTop_toTopOf="@+id/imageView31" />
 
         <TextView
             android:id="@+id/textView47"
-            android:layout_width="250dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
@@ -167,6 +173,7 @@
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView32"
             app:layout_constraintTop_toTopOf="@+id/imageView32" />
 
@@ -174,13 +181,12 @@
             android:id="@+id/textView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:text="@string/precription"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:fontFamily="@font/montserrat_medium"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/generateQR"
             app:layout_constraintTop_toBottomOf="@+id/imageView32" />
 
         <TextView
@@ -253,25 +259,28 @@
             android:paddingBottom="5dp"
             android:text="@string/download_nimage"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#BBDEFB"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/generateQR"
-            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+            app:layout_constraintTop_toBottomOf="@+id/textView33"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/bookagain"
-            android:layout_width="355dp"
+            android:layout_width="0dp"
             android:layout_height="48dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="65dp"
             android:background="@drawable/btn"
             android:backgroundTint="#FEFEFE"
             android:fontFamily="@font/montserrat_semibold"
+
             android:text="@string/book_again"
             android:textAllCaps="false"
-
             android:textColor="#1433A4"
             android:textSize="20sp"
             app:iconTint="#FEFEFE"

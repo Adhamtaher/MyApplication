@@ -49,6 +49,8 @@
             android:text="@string/most_popular_lab_analysis"
             android:textColor="@color/white"
             android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/searchview"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/searchview"
             app:layout_constraintTop_toBottomOf="@+id/searchview" />
 

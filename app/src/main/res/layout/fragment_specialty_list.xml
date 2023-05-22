@@ -5,23 +5,20 @@
     android:id="@+id/item_layout"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:layout_marginHorizontal="24dp"
+    android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="8dp"
-    android:background="@null"
-    android:paddingTop="8dp">
+    android:background="@null">
 
 
     <ImageView
         android:id="@+id/specialityImage"
         android:layout_width="46dp"
         android:layout_height="46dp"
+        android:layout_marginStart="16dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/dermatology"
         tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -30,10 +27,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="@string/sp1"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/specialityImage"
         app:layout_constraintTop_toTopOf="parent" />
 

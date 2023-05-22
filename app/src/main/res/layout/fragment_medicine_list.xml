@@ -6,19 +6,19 @@
     android:layout_height="220dp"
     android:layout_marginHorizontal="18dp"
     android:layout_marginVertical="10dp"
-    android:background="@drawable/btn"
-    android:paddingTop="8dp">
+    android:background="@drawable/btn">
 
 
     <ImageView
         android:id="@+id/MedicineImage"
         android:layout_width="135dp"
         android:layout_height="130dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MedicineName"
         app:srcCompat="@drawable/augmentin"
         tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/MedicineName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="11dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="@string/med1"
@@ -39,32 +39,36 @@
         android:id="@+id/priceTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/price_99_00eg"
         android:textColor="@color/main"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/type" />
+        app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
     <TextView
         android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/type_tablet"
         android:textColor="@color/main"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/MedicineName" />
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
         android:numStars="5"
         android:progress="5"
         android:progressTint="#FEC007"
@@ -72,8 +76,8 @@
         android:scaleX="0.5"
         android:scaleY="0.5"
         android:secondaryProgressTint="#FFC107"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/MedicineImage"
+        app:layout_constraintTop_toTopOf="@+id/MedicineName"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
@@ -81,7 +85,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView16"
         app:layout_constraintStart_toEndOf="@+id/MedicineImage"
         app:layout_constraintTop_toBottomOf="@+id/MedicineName"
         app:srcCompat="@drawable/baseline_medication_24"
@@ -92,17 +97,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/MedicineImage"
         app:layout_constraintStart_toEndOf="@+id/MedicineImage"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/baseline_attach_money_24"
+        app:tint="@color/main"
         tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/addtocart"
         android:layout_width="125dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bluebtn"
         android:fontFamily="@font/montserrat_medium"
@@ -118,9 +124,9 @@
 
     <TextView
         android:id="@+id/button3"
-        android:layout_width="210dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/green"

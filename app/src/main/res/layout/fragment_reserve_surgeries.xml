@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,15 +14,18 @@
 
         <Button
             android:id="@+id/datepick"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/btn"
             android:fontFamily="@font/montserrat"
             android:text="@string/select_the_date"
             android:textAllCaps="false"
             android:textColor="@color/main"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView39"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView39"
             app:layout_constraintTop_toTopOf="@+id/imageView39"
             tools:ignore="TextSizeCheck" />
@@ -30,7 +34,7 @@
             android:id="@+id/imageView22"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
             android:src="@drawable/surgery"
@@ -41,7 +45,7 @@
             android:id="@+id/imageView33"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
             android:src="@drawable/spec1"
@@ -50,12 +54,15 @@
 
         <EditText
             android:id="@+id/textView58"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:autofillHints=""
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:hint="@string/medical_diagnosis"
+            android:inputType="text"
             android:minHeight="48dp"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
@@ -64,17 +71,18 @@
             android:textColor="#FFFFFF"
             android:textColorHint="@color/white"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView33"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView33"
             app:layout_constraintTop_toTopOf="@+id/imageView33"
-            tools:ignore="RtlSymmetry"
-            android:inputType="text"
-            android:autofillHints="" />
+            tools:ignore="RtlSymmetry" />
 
         <EditText
             android:id="@+id/textView27"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:hint="@string/fees0"
@@ -88,6 +96,8 @@
             android:textColor="#FFFFFF"
             android:textColorHint="@color/white"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
             tools:ignore="RtlSymmetry" />
@@ -96,7 +106,7 @@
             android:id="@+id/imageView8"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
             android:src="@drawable/baseline_attach_money_24"
@@ -107,7 +117,7 @@
             android:id="@+id/imageView39"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:importantForAccessibility="no"
             android:src="@drawable/baseline_calendar_month_24"
@@ -137,7 +147,7 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.35"
             app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
@@ -158,11 +168,11 @@
             android:id="@+id/doctorImage"
             android:layout_width="135dp"
             android:layout_height="139dp"
-            android:layout_marginTop="192dp"
+            android:layout_marginTop="17dp"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
             app:srcCompat="@drawable/smilingdoctor"
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -170,20 +180,22 @@
             android:id="@+id/doctorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="352dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="@string/dr1"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/doctorImage" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="375dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingTop="10dp"
@@ -198,10 +210,11 @@
 
         <EditText
             android:id="@+id/phonenumber"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:ems="10"
             android:fontFamily="@font/montserrat"
@@ -212,16 +225,18 @@
             android:textColorHint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/username"
             tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/back"
             android:ems="10"
             android:fontFamily="@font/montserrat"
@@ -230,8 +245,9 @@
             android:paddingStart="20dp"
             android:textColor="#FFFDFD"
             android:textColorHint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/phonenumber"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/imageView3"
             tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck" />
@@ -241,7 +257,7 @@
             android:id="@+id/imageView3"
             android:layout_width="50dp"
             android:layout_height="110dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:foregroundTint="@color/white"
             android:importantForAccessibility="no"
@@ -253,12 +269,15 @@
 
         <EditText
             android:id="@+id/textView25"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/back"
             android:fontFamily="@font/montserrat"
             android:hint="@string/operation_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
             android:minHeight="48dp"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
@@ -267,24 +286,26 @@
             android:textColor="#FFFFFF"
             android:textColorHint="@color/white"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView22"
             app:layout_constraintTop_toTopOf="@+id/imageView22"
-            tools:ignore="RtlSymmetry"
-            android:inputType="text"
-            android:importantForAutofill="no" />
+            tools:ignore="RtlSymmetry" />
 
         <Button
             android:id="@+id/confirm"
-            android:layout_width="355dp"
+            android:layout_width="0dp"
             android:layout_height="48dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="65dp"
             android:background="@drawable/btn"
             android:backgroundTint="#FEFEFE"
             android:fontFamily="@font/montserrat_semibold"
+
             android:text="@string/confirm"
             android:textAllCaps="false"
-
             android:textColor="#1433A4"
             android:textSize="20sp"
             app:iconTint="#FEFEFE"

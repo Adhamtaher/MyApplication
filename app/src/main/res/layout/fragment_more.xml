@@ -7,131 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView68"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Rate us"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView49"
-        app:layout_constraintStart_toEndOf="@+id/imageView49"
-        app:layout_constraintTop_toTopOf="@+id/imageView49"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView49"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView48"
-        app:srcCompat="@drawable/baseline_sentiment_very_satisfied_24"
-        app:tint="@color/white" />
-
-    <TextView
-        android:id="@+id/textView69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Invite friends"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView50"
-        app:layout_constraintStart_toEndOf="@+id/imageView50"
-        app:layout_constraintTop_toTopOf="@+id/imageView50" />
-
-    <ImageView
-        android:id="@+id/imageView50"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView49"
-        app:srcCompat="@drawable/baseline_people_24"
-        app:tint="@color/white" />
-
-    <ImageView
-        android:id="@+id/backButton6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@null"
-        android:rotationY="180"
-        android:scaleType="fitXY"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/textView69"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView69"
-        app:layout_constraintTop_toTopOf="@+id/textView69"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/backButton5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginEnd="24dp"
-        android:background="@null"
-        android:rotationY="180"
-        android:scaleType="fitXY"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/textView68"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView68"
-        app:layout_constraintTop_toTopOf="@+id/textView68"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/textView67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Settings"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView48"
-        app:layout_constraintStart_toEndOf="@+id/imageView48"
-        app:layout_constraintTop_toTopOf="@+id/imageView48" />
-
-    <ImageView
-        android:id="@+id/imageView48"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView30"
-        app:srcCompat="@drawable/baseline_settings_24"
-        app:tint="@color/white" />
-
-    <ImageView
-        android:id="@+id/backButton4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="98dp"
-        android:background="@null"
-        android:rotationY="180"
-        android:scaleType="fitXY"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/textView67"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView67"
-        app:layout_constraintTop_toTopOf="@+id/textView67"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription" />
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="match_parent"
@@ -174,22 +49,17 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/backButton2"
+        android:id="@+id/imageView30"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginEnd="24dp"
-        android:background="@null"
-        android:rotationY="180"
-        android:scaleType="fitXY"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/textView48"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView48"
-        app:layout_constraintTop_toTopOf="@+id/textView48"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView48"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/account"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/textView48"
@@ -201,25 +71,151 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView30"
+        app:layout_constraintEnd_toStartOf="@+id/backButton2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView30"
         app:layout_constraintTop_toTopOf="@+id/imageView30" />
 
     <ImageView
-        android:id="@+id/imageView30"
+        android:id="@+id/backButton2"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:rotationY="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView48"
+        app:layout_constraintTop_toTopOf="@+id/textView48"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/account"
+        app:layout_constraintStart_toStartOf="@+id/imageView30"
+        app:layout_constraintTop_toBottomOf="@+id/imageView30"
+        app:srcCompat="@drawable/baseline_settings_24"
         app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView48"
+        app:layout_constraintStart_toStartOf="@+id/textView48"
+        app:layout_constraintTop_toTopOf="@+id/imageView48" />
+
+    <ImageView
+        android:id="@+id/backButton4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:rotationY="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView67"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backButton2"
+        app:layout_constraintTop_toTopOf="@+id/textView67"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView48"
+        app:layout_constraintTop_toBottomOf="@+id/imageView48"
+        app:srcCompat="@drawable/baseline_sentiment_very_satisfied_24"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Rate us"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView49"
+        app:layout_constraintStart_toStartOf="@+id/textView67"
+        app:layout_constraintTop_toTopOf="@+id/imageView49"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/backButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:rotationY="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView68"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backButton4"
+        app:layout_constraintTop_toTopOf="@+id/textView68"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView49"
+        app:layout_constraintTop_toBottomOf="@+id/imageView49"
+        app:srcCompat="@drawable/baseline_people_24"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Invite friends"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView50"
+        app:layout_constraintStart_toStartOf="@+id/textView68"
+        app:layout_constraintTop_toTopOf="@+id/imageView50" />
+
+    <ImageView
+        android:id="@+id/backButton6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:rotationY="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView69"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backButton5"
+        app:layout_constraintTop_toTopOf="@+id/textView69"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
 
     <androidx.constraintlayout.helper.widget.Layer
         android:id="@+id/account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         app:constraint_referenced_ids="imageView30,textView48,backButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -239,7 +235,6 @@
         android:id="@+id/rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
         app:constraint_referenced_ids="imageView49,textView68,backButton5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -249,13 +244,9 @@
         android:id="@+id/invite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         app:constraint_referenced_ids="imageView50,textView69,backButton6"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rate" />
-
+        app:layout_constraintTop_toBottomOf="@+id/layer3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

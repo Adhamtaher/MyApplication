@@ -21,9 +21,11 @@
 
     <Button
         android:id="@+id/medicalconditions"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/btn"
         android:backgroundTint="#FEFEFE"
         android:fontFamily="@font/montserrat_semibold"
@@ -32,16 +34,20 @@
         android:textColor="#1433A4"
         android:textSize="18sp"
         app:iconTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/doctors"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/doctors"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/btn"
         android:backgroundTint="#FEFEFE"
         android:fontFamily="@font/montserrat_semibold"
@@ -50,16 +56,20 @@
         android:textColor="#1433A4"
         android:textSize="18sp"
         app:iconTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/analysis"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medicalconditions"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/analysis"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/btn"
         android:backgroundTint="#FEFEFE"
         android:fontFamily="@font/montserrat_semibold"
@@ -68,16 +78,20 @@
         android:textColor="#1433A4"
         android:textSize="18sp"
         app:iconTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/radiations"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctors"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/radiations"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/btn"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/radiations"
@@ -85,16 +99,21 @@
         android:textColor="#1433A4"
         android:textSize="18sp"
         app:iconTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/surgeries"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/analysis"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/surgeries"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="65dp"
         android:background="@drawable/btn"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/surgeries"
@@ -102,7 +121,9 @@
         android:textColor="#1433A4"
         android:textSize="18sp"
         app:iconTint="#FEFEFE"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radiations"
         tools:ignore="VisualLintButtonSize" />
@@ -118,7 +139,6 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/backButton"
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
@@ -144,9 +164,10 @@
         android:text="@string/check_your"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/medicalconditions"
+        app:layout_constraintEnd_toEndOf="@+id/medicalconditions"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/medicalconditions"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
