@@ -17,6 +17,26 @@ class Account : Fragment() {
     ): View? {
         binding = FragmentAccountBinding.inflate(inflater, container, false)
 
+        binding.editBtn.setOnClickListener {
+            if (binding.editBtn.isChecked) {
+                binding.Username.isEnabled = true
+                binding.Email.isEnabled = true
+                binding.Password.isEnabled = true
+                binding.City.isEnabled = true
+                binding.Address.isEnabled = true
+                binding.Birthday.isEnabled = true
+                binding.PhoneNo.isEnabled = true
+            } else {
+                binding.Username.isEnabled = false
+                binding.Email.isEnabled = false
+                binding.Password.isEnabled = false
+                binding.City.isEnabled = false
+                binding.Address.isEnabled = false
+                binding.Birthday.isEnabled = false
+                binding.PhoneNo.isEnabled = false
+            }
+        }
+
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_account_to_more)
         }

@@ -1,4 +1,4 @@
-package com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis
+package com.example.myapplication.fragment.patient.medicalhistory.diagnosis
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -16,9 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
-import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentDiagnosisDetailsBinding
-import com.example.myapplication.databinding.FragmentSurgeriesResultsBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 

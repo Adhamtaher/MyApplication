@@ -15,7 +15,7 @@ import com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.M
 import java.util.ArrayList
 import java.util.Locale
 
-class Medicines : Fragment(), MedicineAdapter.MyClickListener{
+class Medicines : Fragment(){
 
     lateinit var adapter: MedicineAdapter
     lateinit var medicineList: ArrayList<MedicineList>
@@ -35,7 +35,7 @@ class Medicines : Fragment(), MedicineAdapter.MyClickListener{
         val layoutManager = LinearLayoutManager(context)
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.setHasFixedSize(true)
-        adapter = MedicineAdapter(medicineList, this@Medicines)
+        adapter = MedicineAdapter(medicineList)
         binding.recyclerView.adapter = adapter
 
         binding.searchview.clearFocus()
@@ -99,10 +99,6 @@ class Medicines : Fragment(), MedicineAdapter.MyClickListener{
         for (i in imageId.indices) {
             val medicine = MedicineList(imageId[i], heading[i], price[i], type[i])
             medicineList.add(medicine)
-        }
-    }
-    override fun onClick(position: Int) {
-        when(position){
         }
     }
 }

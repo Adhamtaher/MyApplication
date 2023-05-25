@@ -62,7 +62,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/full_name"
@@ -83,7 +82,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/email"
@@ -98,14 +96,13 @@
                 tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
 
             <EditText
-                android:id="@+id/PassworD"
+                android:id="@+id/Password"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/password"
@@ -120,14 +117,13 @@
                 tools:ignore="Autofill,Deprecated,DuplicateSpeakableTextCheck,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
 
             <EditText
-                android:id="@+id/CitY"
+                android:id="@+id/City"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/city"
@@ -142,14 +138,13 @@
                 tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
-                android:id="@+id/AddresS"
+                android:id="@+id/Address"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/address"
@@ -164,14 +159,13 @@
                 tools:ignore="Autofill,Deprecated,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
             <EditText
-                android:id="@+id/BirthDay"
+                android:id="@+id/Birthday"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/birthday"
@@ -193,7 +187,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/back"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/phone"
@@ -214,7 +207,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="60dp"
+                android:layout_marginBottom="65dp"
                 android:background="@drawable/back"
                 android:editable="false"
                 android:ems="10"
@@ -239,10 +232,10 @@
                 android:text="@string/address"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/AddresS"
+                app:layout_constraintEnd_toEndOf="@+id/Address"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/AddresS"
-                app:layout_constraintTop_toBottomOf="@+id/CitY" />
+                app:layout_constraintStart_toStartOf="@+id/Address"
+                app:layout_constraintTop_toBottomOf="@+id/City" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -253,10 +246,10 @@
                 android:text="@string/birthday"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/BirthDay"
+                app:layout_constraintEnd_toEndOf="@+id/Birthday"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/BirthDay"
-                app:layout_constraintTop_toBottomOf="@+id/AddresS" />
+                app:layout_constraintStart_toStartOf="@+id/Birthday"
+                app:layout_constraintTop_toBottomOf="@+id/Address" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -270,7 +263,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/PhoneNo"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/PhoneNo"
-                app:layout_constraintTop_toBottomOf="@+id/BirthDay" />
+                app:layout_constraintTop_toBottomOf="@+id/Birthday" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -295,9 +288,9 @@
                 android:text="@string/password"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/PassworD"
+                app:layout_constraintEnd_toEndOf="@+id/Password"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/PassworD"
+                app:layout_constraintStart_toStartOf="@+id/Password"
                 app:layout_constraintTop_toBottomOf="@+id/Email" />
 
             <TextView
@@ -309,10 +302,10 @@
                 android:text="@string/city"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/CitY"
+                app:layout_constraintEnd_toEndOf="@+id/City"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/CitY"
-                app:layout_constraintTop_toBottomOf="@+id/PassworD" />
+                app:layout_constraintStart_toStartOf="@+id/City"
+                app:layout_constraintTop_toBottomOf="@+id/Password" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -341,11 +334,11 @@
                 app:layout_constraintStart_toStartOf="@+id/Email"
                 app:layout_constraintTop_toBottomOf="@+id/Username" />
 
-            <Button
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/editBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="24dp"
                 android:background="#00FFFFFF"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/edit"

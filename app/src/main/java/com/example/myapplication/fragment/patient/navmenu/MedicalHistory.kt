@@ -34,7 +34,7 @@ class MedicalHistory : Fragment() {
             findNavController().navigate(R.id.action_medicalHistory_to_surgeriesHistory)
         }
         binding.medicalconditions.setOnClickListener {
-            findNavController().navigate(R.id.action_medicalHistory_to_medicalCondition)
+            findNavController().navigate(R.id.action_medicalHistory_to_diagnosis2)
         }
 
         return binding.root

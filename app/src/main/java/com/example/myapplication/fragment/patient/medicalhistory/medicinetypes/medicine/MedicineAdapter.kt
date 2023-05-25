@@ -8,16 +8,11 @@ import com.example.myapplication.databinding.FragmentDoctorHistoryListBinding
 import com.example.myapplication.databinding.FragmentMedicineListBinding
 import com.example.myapplication.fragment.patient.medicalhistory.medicinetypes.MedicineTypesList
 
-class MedicineAdapter(private var medicineList: ArrayList<MedicineList>, val listener: MedicineAdapter.MyClickListener) :
+class MedicineAdapter(private var medicineList: ArrayList<MedicineList>) :
     RecyclerView.Adapter<MedicineAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentMedicineListBinding): RecyclerView.ViewHolder(itemBinding.root){
-        init {
-            itemBinding.addtocart.setOnClickListener {
-                val position = adapterPosition
-                listener.onClick(position)
-            }
-        }
+
     }
 
     fun setFilteredList(medicineList: java.util.ArrayList<MedicineList>){
@@ -40,7 +35,5 @@ class MedicineAdapter(private var medicineList: ArrayList<MedicineList>, val lis
         holder.itemBinding.priceTag.text = medicineList[position].price
         holder.itemBinding.type.text = medicineList[position].type
     }
-    interface MyClickListener{
-        fun onClick(position: Int)
-    }
+
 }

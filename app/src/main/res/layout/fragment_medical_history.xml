@@ -29,7 +29,7 @@
         android:background="@drawable/btn"
         android:backgroundTint="#FEFEFE"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/medical_condition"
+        android:text="@string/medical_diagnosis"
         android:textAllCaps="false"
         android:textColor="#1433A4"
         android:textSize="18sp"

@@ -1,6 +1,7 @@
 package com.example.myapplication.fragment.patient.navmenu
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,8 +16,6 @@ import java.util.Calendar
 class MainPagePatient : Fragment() {
 
     private lateinit var binding: FragmentMainPagePatientBinding
-    private val REQUEST_CODE_IMAGE_PICKER = 100
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?
@@ -48,19 +47,19 @@ class MainPagePatient : Fragment() {
         binding.ordermedicine.setOnClickListener {
             findNavController().navigate(R.id.action_mainPagePatient_to_medicineTypes)
         }
-        binding.sendPrescription.setOnClickListener {
-            pickImageFromGallery()
+
+        val phoneNumber = "01011498307"
+        val dialIntent = Intent(Intent.ACTION_DIAL)
+        dialIntent.data = Uri.parse("tel:$phoneNumber")
+
+        binding.phonecall.setOnClickListener {
+            startActivity(dialIntent)
         }
         binding.searchbtn.setOnClickListener {
             findNavController().navigate(R.id.action_mainPagePatient_to_medicineTypes)
         }
 
+
         return binding.root
-    }
-    private fun pickImageFromGallery() {
-        // Intent to pick image from gallery
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type = "image/*"
-        startActivityForResult(intent, REQUEST_CODE_IMAGE_PICKER)
     }
 }

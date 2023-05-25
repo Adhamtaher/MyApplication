@@ -14,7 +14,7 @@
         android:icon="@drawable/medicalhistory"
         android:title="@string/history"/>
     <item
-        android:id="@+id/account"
+        android:id="@+id/more"
         android:icon="@drawable/ic_more"
         android:title="@string/more"/>
 

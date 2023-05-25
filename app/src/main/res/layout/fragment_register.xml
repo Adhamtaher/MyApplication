@@ -188,6 +188,7 @@
             android:background="@drawable/btn"
             android:fontFamily="@font/montserrat_medium"
             android:text="@string/register"
+            android:textAllCaps="false"
             android:textColor="#1B43BB"
             app:iconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"

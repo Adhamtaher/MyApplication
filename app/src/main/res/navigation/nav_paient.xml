@@ -76,11 +76,11 @@
             android:id="@+id/action_medicalHistory_to_surgeriesHistory"
             app:destination="@id/surgeriesHistory" />
         <action
-            android:id="@+id/action_medicalHistory_to_medicalCondition"
-            app:destination="@id/medicalCondition" />
-        <action
             android:id="@+id/action_medicalHistory_to_mainPagePatient"
             app:destination="@id/mainPagePatient" />
+        <action
+            android:id="@+id/action_medicalHistory_to_diagnosis2"
+            app:destination="@id/diagnosis2" />
     </fragment>
     <fragment
         android:id="@+id/account"
@@ -218,23 +218,15 @@
             app:destination="@id/surgeriesResults" />
     </fragment>
     <fragment
-        android:id="@+id/medicalCondition"
-        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.MedicalCondition"
-        android:label="MedicalCondition" >
-        <action
-            android:id="@+id/action_medicalCondition_to_diagnosis2"
-            app:destination="@id/diagnosis2" />
-        <action
-            android:id="@+id/action_medicalCondition_to_medicalHistory"
-            app:destination="@id/medicalHistory" />
-    </fragment>
-    <fragment
         android:id="@+id/diagnosis2"
-        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis.Diagnosis"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.diagnosis.Diagnosis"
         android:label="Diagnosis" >
         <action
             android:id="@+id/action_diagnosis2_to_diagnosisDetails"
             app:destination="@id/diagnosisDetails" />
+        <action
+            android:id="@+id/action_diagnosis2_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
     </fragment>
     <fragment
         android:id="@+id/booking"
@@ -338,7 +330,7 @@
         tools:layout="@layout/fragment_surgeries_results" />
     <fragment
         android:id="@+id/diagnosisDetails"
-        android:name="com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis.DiagnosisDetails"
+        android:name="com.example.myapplication.fragment.patient.medicalhistory.diagnosis.DiagnosisDetails"
         android:label="fragment_diagnosis_details"
         tools:layout="@layout/fragment_diagnosis_details" />
     <fragment

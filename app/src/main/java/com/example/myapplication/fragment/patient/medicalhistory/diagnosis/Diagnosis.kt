@@ -1,17 +1,20 @@
-package com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis
+package com.example.myapplication.fragment.patient.medicalhistory.diagnosis
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentDiagnosisBinding
+import com.example.myapplication.fragment.patient.activity.doctor.DoctorActivityAdapter
 import java.util.ArrayList
 
-class Diagnosis : Fragment(), DiagnosisAdapter.MyClickListener {
+class Diagnosis : Fragment(), DiagnosisAdapter.MyClickListener, DiagnosisAdapter.MyListener {
 
     lateinit var adapter: DiagnosisAdapter
     lateinit var diagnosisList: ArrayList<DiagnosisList>
@@ -31,11 +34,11 @@ class Diagnosis : Fragment(), DiagnosisAdapter.MyClickListener {
         val layoutManager = LinearLayoutManager(context)
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.setHasFixedSize(true)
-        adapter = DiagnosisAdapter(diagnosisList, this@Diagnosis)
+        adapter = DiagnosisAdapter(diagnosisList, this@Diagnosis, this@Diagnosis)
         binding.recyclerView.adapter = adapter
 
         binding.backButton.setOnClickListener {
-            activity?.onBackPressed()
+            findNavController().navigate(R.id.action_diagnosis2_to_medicalHistory)
         }
 
         return binding.root
@@ -67,6 +70,20 @@ class Diagnosis : Fragment(), DiagnosisAdapter.MyClickListener {
         when(position){
             0-> findNavController().navigate(R.id.action_diagnosis2_to_diagnosisDetails)
             1-> findNavController().navigate(R.id.action_diagnosis2_to_diagnosisDetails)
+        }
+    }
+    override fun onDelete(position: Int) {
+        val builder = AlertDialog.Builder(context)
+        builder.setView(R.layout.alertbox3)
+        val dialog = builder.create()
+        dialog.show()
+        dialog.findViewById<Button>(R.id.btn_yes)?.setOnClickListener {
+            adapter.removeItem(position)
+            dialog.dismiss()
+        }
+        dialog.findViewById<Button>(R.id.btn_cancel)?.setOnClickListener {
+            // Do something when the user clicks No button
+            dialog.dismiss()
         }
     }
 }

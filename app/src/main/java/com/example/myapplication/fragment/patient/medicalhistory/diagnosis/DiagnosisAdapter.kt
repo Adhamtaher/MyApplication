@@ -1,11 +1,12 @@
-package com.example.myapplication.fragment.patient.medicalhistory.medicalcondition.diagnosis
+package com.example.myapplication.fragment.patient.medicalhistory.diagnosis
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentDiagnosisListBinding
+import com.example.myapplication.fragment.patient.activity.doctor.DoctorActivityAdapter
 
-class DiagnosisAdapter(private val diagnosisList: ArrayList<DiagnosisList>, val listener: DiagnosisAdapter.MyClickListener) :
+class DiagnosisAdapter(private val diagnosisList: ArrayList<DiagnosisList>, val listener: MyClickListener, val onlistener: MyListener) :
     RecyclerView.Adapter<DiagnosisAdapter.MyView>() {
 
     inner class MyView(val itemBinding: FragmentDiagnosisListBinding): RecyclerView.ViewHolder(itemBinding.root){
@@ -13,6 +14,10 @@ class DiagnosisAdapter(private val diagnosisList: ArrayList<DiagnosisList>, val 
             itemBinding.details.setOnClickListener {
                 val position = adapterPosition
                 listener.onClick(position)
+            }
+            itemBinding.cancel.setOnClickListener {
+                val position = adapterPosition
+                onlistener.onDelete(position)
             }
         }
     }
@@ -33,5 +38,12 @@ class DiagnosisAdapter(private val diagnosisList: ArrayList<DiagnosisList>, val 
     }
     interface MyClickListener{
         fun onClick(position: Int)
+    }
+    interface MyListener{
+        fun onDelete(position: Int)
+    }
+    fun removeItem(position: Int) {
+        diagnosisList.removeAt(position)
+        notifyItemRemoved(position)
     }
 }

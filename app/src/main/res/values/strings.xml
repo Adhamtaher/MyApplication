@@ -139,7 +139,6 @@
     <string name="surgeries">Surgeries</string>
     <string name="medicines">Medicines</string>
     <string name="check_your">Check your:</string>
-    <string name="medical_condition">Medical condition</string>
     <string name="not_feeling_good_we_are_here_to_help_just_take_the_medical_assessment">Not feeling good?\nWe are here to help,\nJust take the medical\nassessment.</string>
     <string name="welcome_to_hospi">Welcome to Hospi!</string>
     <string name="title_activity_main2">MainActivity2</string>
@@ -307,4 +306,5 @@
     <string name="are_you_sure_you_nwant_to_cancel_this_nappointment">Are you sure you\nwant to cancel this\nappointment?</string>
     <string name="are_you_sure_you_nwant_to_cancel_nthis_day">Are you sure you\nwant to cancel\nthis day?</string>
     <string name="settings">Settings</string>
+    <string name="are_you_sure_you_nwant_to_proceed">Are you sure you\nwant to proceed?</string>
 </resources>
