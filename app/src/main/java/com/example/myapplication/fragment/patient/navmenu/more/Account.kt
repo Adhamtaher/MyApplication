@@ -16,6 +16,13 @@ class Account : Fragment() {
                               savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAccountBinding.inflate(inflater, container, false)
+        binding.Username.isEnabled = false
+        binding.Email.isEnabled = false
+        binding.Password.isEnabled = false
+        binding.City.isEnabled = false
+        binding.Address.isEnabled = false
+        binding.Birthday.isEnabled = false
+        binding.PhoneNo.isEnabled = false
 
         binding.editBtn.setOnClickListener {
             if (binding.editBtn.isChecked) {
@@ -26,14 +33,6 @@ class Account : Fragment() {
                 binding.Address.isEnabled = true
                 binding.Birthday.isEnabled = true
                 binding.PhoneNo.isEnabled = true
-            } else {
-                binding.Username.isEnabled = false
-                binding.Email.isEnabled = false
-                binding.Password.isEnabled = false
-                binding.City.isEnabled = false
-                binding.Address.isEnabled = false
-                binding.Birthday.isEnabled = false
-                binding.PhoneNo.isEnabled = false
             }
         }
 

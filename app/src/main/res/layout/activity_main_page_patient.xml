@@ -14,10 +14,10 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/normalcopy"
         app:itemIconTint="@color/main"
+        app:itemTextAppearanceActive="@style/MyBottomNavTextStyle"
         app:itemTextColor="#0F1498"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/nav_menu"
-        tools:ignore="VisualLintBottomNav" />
+        app:menu="@menu/nav_menu" />
 
     <ScrollView
         android:layout_width="match_parent"
