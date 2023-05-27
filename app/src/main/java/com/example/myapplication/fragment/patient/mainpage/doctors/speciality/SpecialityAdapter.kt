@@ -36,6 +36,7 @@ class SpecialityAdapter(private var specialityList: ArrayList<SpecialtyList>, va
     override fun onBindViewHolder(holder: MyView, position: Int) {
         holder.itemBinding.specialityImage.setImageResource(specialityList[position].titleImage)
         holder.itemBinding.specialityName.text = specialityList[position].heading
+        holder.itemBinding.specialityName.setOnClickListener { listener.onClick(position) }
 
     }
     interface MyClickListener{

@@ -13,7 +13,7 @@ import com.example.myapplication.databinding.FragmentDoctorsBinding
 import java.util.ArrayList
 import java.util.Locale
 
-class Doctors : Fragment(), DoctorsAdapter.MyClickListener, DoctorsAdapter.MyListener{
+class DoctorsFragment : Fragment(){
 
     lateinit var adapter: DoctorsAdapter
     lateinit var doctorList: ArrayList<DoctorsList>
@@ -36,7 +36,7 @@ class Doctors : Fragment(), DoctorsAdapter.MyClickListener, DoctorsAdapter.MyLis
         val layoutManager = LinearLayoutManager(context)
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.setHasFixedSize(true)
-        adapter = DoctorsAdapter(doctorList, this@Doctors, this@Doctors)
+        adapter = DoctorsAdapter()
         binding.recyclerView.adapter = adapter
 
         binding.searchview.clearFocus()
@@ -72,7 +72,7 @@ class Doctors : Fragment(), DoctorsAdapter.MyClickListener, DoctorsAdapter.MyLis
                 Toast.makeText(context, "No data found", Toast.LENGTH_SHORT).show()
             }
             else{
-                adapter.setFilteredList(filteredList)
+               // adapter.setFilteredList(filteredList)
 
             }
         }
@@ -104,16 +104,22 @@ class Doctors : Fragment(), DoctorsAdapter.MyClickListener, DoctorsAdapter.MyLis
             doctorList.add(doctors)
         }
     }
-    override fun onClick(position: Int) {
-        when(position){
-            0-> findNavController().navigate(R.id.action_doctors_to_booking)
-            1-> findNavController().navigate(R.id.action_doctors_to_booking)
-        }
-    }
-    override fun onClik(position: Int) {
-        when(position){
-            0-> findNavController().navigate(R.id.action_doctors_to_confirmBooking)
-            1-> findNavController().navigate(R.id.action_doctors_to_confirmBooking)
-        }
-    }
+//    override fun onClick(position: Int) {
+//        when(position){
+//            0-> findNavController().navigate(R.id.action_doctors_to_booking)
+//            1-> findNavController().navigate(R.id.action_doctors_to_booking)
+//        }
+//    }
+//    override fun onClik(position: Int) {
+//        when(position){
+//            0-> findNavController().navigate(R.id.action_doctors_to_confirmBooking)
+//            1-> findNavController().navigate(R.id.action_doctors_to_confirmBooking)
+//        }
+//    }
 }
+data class Doctors(
+    val idCategory: String,
+    val strCategory: String,
+    val strCategoryDescription: String,
+    val strCategoryThumb: String
+)
