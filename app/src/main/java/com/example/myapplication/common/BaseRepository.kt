@@ -2,6 +2,7 @@ package com.example.myapplication.common
 
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -23,7 +24,9 @@ open class BaseRepository {
             build()
         }
         private val retorfit = Retrofit.Builder().baseUrl("https://graceful-jay-cowboy-hat.cyclic.app")
+            .addConverterFactory(GsonConverterFactory.create())
             .addConverterFactory(converterFactory).client(okhttpClient).build()
+
         val service = retorfit.create(HospiService::class.java)
     }
 }

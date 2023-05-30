@@ -7,38 +7,66 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.activity.MainPagePatient
+import com.example.myapplication.common.State
 import com.example.myapplication.databinding.FragmentLoginBinding
+import com.example.myapplication.fragment.main.login.LoginInfo
+import com.example.myapplication.fragment.main.login.LoginViewModel
+import kotlinx.coroutines.launch
 
 
 class Login : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    val viewModel by viewModels<LoginViewModel>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
-
+        observerUserLoginState()
         binding.login.setOnClickListener {
-            if(binding.username.text.isNotEmpty()&&binding.password.text.isNotEmpty()){
-            Toast.makeText(context, "Logged in successfully", Toast.LENGTH_SHORT).show()
-                val intent = Intent(context, MainPagePatient::class.java)
-                startActivity(intent)
-                //val action = LoginDirections.actionLoginToMainPage(binding.username.text.toString())
-                //findNavController().navigate(action)
-            }
-        else{
-            Toast.makeText(context, "Please fill the required fields", Toast.LENGTH_SHORT).show()
+            val loginInfo = LoginInfo(
+                email = binding.username.text.toString(),
+                password = binding.password.text.toString(),
+
+                )
+            viewModel.loginUser(loginInfo)
         }
-    }
         binding.bkRegister.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_register)
         }
 
-    return binding.root
+        return binding.root
+    }
+
+    private fun observerUserLoginState() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED){
+                viewModel.loginSharedFlow.collect{
+                    binding.progress.isVisible = false
+                    binding.login.visibility = View.VISIBLE
+                    when(it){
+                        is State.Error -> handleError(it.message)
+                        is State.Loading -> {
+                            binding.progress.isVisible = true
+                            binding.login.visibility = View.INVISIBLE
+                        }
+                        is State.Success -> startActivity(Intent(requireContext(), MainPagePatient::class.java))
+                    }
+                }
+            }
+        }
+    }
+    private fun handleError(message: String?) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
     }
 
 }
