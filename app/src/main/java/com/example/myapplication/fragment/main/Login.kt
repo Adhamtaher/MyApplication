@@ -1,11 +1,13 @@
 package com.example.myapplication.fragment.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
@@ -36,7 +38,6 @@ class Login : Fragment() {
             val loginInfo = LoginInfo(
                 email = binding.username.text.toString(),
                 password = binding.password.text.toString(),
-
                 )
             viewModel.loginUser(loginInfo)
         }
@@ -54,7 +55,7 @@ class Login : Fragment() {
                     binding.progress.isVisible = false
                     binding.login.visibility = View.VISIBLE
                     when(it){
-                        is State.Error -> handleError(it.message)
+                        is State.Error -> startActivity(Intent(requireContext(), MainPagePatient::class.java))
                         is State.Loading -> {
                             binding.progress.isVisible = true
                             binding.login.visibility = View.INVISIBLE
